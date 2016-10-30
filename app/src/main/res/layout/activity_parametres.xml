@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Compte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_compe"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="5dp" />
+
+    <TextView
+        android:text="abc@test.ch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_userEmail"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:text="Modifier mon mot de passe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button13"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:text="Se déconnecter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button14"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:text="Général"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_general"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:paddingLeft="5dp" />
+
+    <Button
+        android:text="Langue de navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button15" />
+
+</LinearLayout>

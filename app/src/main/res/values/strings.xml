@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">ProjectLearnLanguage</string>
+    <string name="LearnFrench">Apprendre le français</string>
+    <string name="LearnEnglish">Apprendre  l anglais</string>
+    <string name="LearnGerman">Apprendre l allemand</string>
+    <string name="DifficultyBegginer">Cours débutants</string>
+    <string name="DifficultyAdvanced">Cours intermédiraires</string>
+    <string name="DifficutlyExpert">Cours experts</string>
+    <string name="Exercice1">Exercice 1: Vocabulaire</string>
+    <string name="Exercice2">Exercice 2: Choix multiples</string>
+    <string name="Exercice3">Exercice 3: Textes à trous</string>
+    <string name="Vocabulaire">Vocabulaire</string>
+    <string name="RuleVocabulary">Etudiez le vocabulaire</string>
+
+    <string name="Rouge">Rouge</string>
+    <string name="Bleu">Bleu</string>
+    <string name="Blanc">Blanc</string>
+    <string name="Vert">Vert</string>
+    <string name="Orange_FR">Orange</string>
+
+    <string name="Red">Red</string>
+    <string name="Blue">Blue</string>
+    <string name="White">White</string>
+    <string name="Green">Green</string>
+    <string name="Organce_EN">Orange</string>
+    <string name="title_activity_menu">Menu</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <string name="menu_slider">Menu</string>
+    <string name="nav_home">Accueil</string>
+    <string name="nav_cours">Cours</string>
+    <string name="nav_param">Parametres</string>
+
+    <string-array name="nav_item_activity_titles">
+        <item>Accueil</item>
+        <item>Cours</item>
+        <item>Parametres</item>
+    </string-array>
+
+    <string name="activity_title_home">Accueil</string>
+    <string name="activity_title_cours">Cours</string>
+    <string name="activity_title_param">Parametres</string>
+
+
+    <string name="action_settings">Settings</string>
+
+
+
+
+</resources>
