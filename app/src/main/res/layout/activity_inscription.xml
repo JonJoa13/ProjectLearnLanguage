@@ -110,13 +110,15 @@
             android:text="S'inscrire"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_subscribe" />
+            android:id="@+id/btn_subscribe"
+            android:onClick="onClickChoixLanguesFromInscription" />
 
         <Button
             android:text="Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_login" />
+            android:id="@+id/btn_login"
+            android:onClick="onClickLoginFromInscription" />
 
     </LinearLayout>
 </LinearLayout>

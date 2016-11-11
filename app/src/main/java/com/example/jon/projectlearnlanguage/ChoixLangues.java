@@ -21,8 +21,9 @@ public class ChoixLangues extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClickMenu(View w){
+    public void onClickMenuFromChoixLangues(View w){
         Intent intent = new Intent(ChoixLangues.this,MenuParam.class);
         startActivity(intent);
     }
+
 }

@@ -20,7 +20,7 @@ public class ChangePWD extends AppCompatActivity {
 
     }
 
-    public void onClickRetour(View w){
+    public void onClickBackToParam(View w){
         Intent intent = new Intent(ChangePWD.this,Parametres.class);
         startActivity(intent);
     }

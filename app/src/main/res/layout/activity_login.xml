@@ -71,7 +71,7 @@
         android:fontFamily="sans-serif-medium"
         android:layout_marginTop="40dp"
         android:textAlignment="center"
-        android:onClick="onClickLogin (Login)" />
+        android:onClick="onClickChoixLanguesFromLogin" />
 
     <Button
         android:text="S'inscrire"
@@ -80,5 +80,5 @@
         android:id="@+id/btn_subscribe"
         style="@style/Widget.AppCompat.Button"
         android:layout_marginTop="20dp"
-        android:onClick="onClickIncription (Login)" />
+        android:onClick="onClickIncriptionFromLogin" />
 </LinearLayout>

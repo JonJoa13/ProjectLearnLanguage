@@ -16,12 +16,12 @@ public class VocabulaireTest extends AppCompatActivity {
         setContentView(R.layout.activity_vocabulaire_test);
     }
 
-    public void onClickRetour(View w){
+    public void onClickBackToVoc(View w){
         Intent intent = new Intent(VocabulaireTest.this,Vocabulaire.class);
         startActivity(intent);
     }
 
-    public void onClickControl(View w){
+    public void onClickControlVoc(View w){
 
     }
 }

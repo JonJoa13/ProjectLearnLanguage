@@ -20,4 +20,9 @@ public class ChoixDifficulte extends AppCompatActivity {
         Intent intent = new Intent(ChoixDifficulte.this,ChoixExercices.class);
         startActivity(intent);
     }
+
+    public void onClickBackToChoixLangues(View w){
+        Intent intent = new Intent(ChoixDifficulte.this,ChoixLangues.class);
+        startActivity(intent);
+    }
 }

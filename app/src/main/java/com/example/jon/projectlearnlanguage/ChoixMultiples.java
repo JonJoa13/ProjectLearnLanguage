@@ -16,16 +16,16 @@ public class ChoixMultiples extends AppCompatActivity {
         setContentView(R.layout.activity_choix_multiples);
     }
 
-    public void onClickRetour(View w){
+    public void onClickBackToChoixExercicesFromChoixMultiples(View w){
         Intent intent = new Intent(ChoixMultiples.this,ChoixExercices.class);
         startActivity(intent);
     }
 
-    public void onClickControl(View w){
+    public void onClickControlChoixMultiples(View w){
 
     }
 
-    public void onClickContinuer(View w){
+    public void onClickContinueToChoixExercices(View w){
         Intent intent = new Intent(ChoixMultiples.this,ChoixExercices.class);
         startActivity(intent);
     }

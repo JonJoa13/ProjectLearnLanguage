@@ -7,7 +7,8 @@
         android:text="Retour"
         android:layout_height="wrap_content"
         android:id="@+id/btn_back"
-        android:layout_width="114dp" />
+        android:layout_width="114dp"
+        android:onClick="onClickBackToParamFromNavLanguage" />
 
     <TextView
         android:text="Langue de navigation"
@@ -54,6 +55,7 @@
         android:id="@+id/btn_edit"
         android:layout_width="222dp"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"
+        android:onClick="onClickModify" />
 
 </LinearLayout>

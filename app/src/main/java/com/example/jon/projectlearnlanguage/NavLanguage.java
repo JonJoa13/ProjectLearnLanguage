@@ -21,8 +21,10 @@ public class NavLanguage extends AppCompatActivity {
 
     }
 
-    public void onClickRetour(View w){
+    public void onClickBackToParamFromNavLanguage(View w){
         Intent intent = new Intent(NavLanguage.this,Parametres.class);
         startActivity(intent);
     }
+
+
 }

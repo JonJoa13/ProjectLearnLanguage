@@ -17,7 +17,7 @@ public class Parametres extends AppCompatActivity {
         setContentView(R.layout.activity_parametres);
     }
 
-    public void onClickModifyMDP(View w){
+    public void onClickModifyMDPFromParam(View w){
         Intent intent = new Intent(Parametres.this,ChangePWD.class);
         startActivity(intent);
     }
@@ -32,7 +32,7 @@ public class Parametres extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClickMenu(View w){
+    public void onClickMenuParamFromParametres(View w){
         Intent intent = new Intent(Parametres.this,MenuParam.class);
         startActivity(intent);
     }

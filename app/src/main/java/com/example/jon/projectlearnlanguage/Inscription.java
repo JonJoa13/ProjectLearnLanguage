@@ -16,12 +16,12 @@ public class Inscription extends AppCompatActivity {
         setContentView(R.layout.activity_inscription);
     }
 
-    public void onClickLogin(View w){
+    public void onClickLoginFromInscription(View w){
         Intent intent = new Intent(Inscription.this,Login.class);
         startActivity(intent);
     }
 
-    public void onClickIncription(View w){
+    public void onClickChoixLanguesFromInscription(View w){
         Intent intent = new Intent(Inscription.this,ChoixLangues.class);
         startActivity(intent);
     }

@@ -16,12 +16,12 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void onClickIncription(View w){
+    public void onClickIncriptionFromLogin(View w){
         Intent intent = new Intent(Login.this,Inscription.class);
         startActivity(intent);
     }
 
-    public void onClickLogin(View w){
+    public void onClickChoixLanguesFromLogin(View w){
         Intent intent = new Intent(Login.this,ChoixLangues.class);
         startActivity(intent);
     }

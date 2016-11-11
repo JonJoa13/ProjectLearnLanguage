@@ -23,6 +23,7 @@ public class MenuParam extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = getIntent();
         setContentView(R.layout.activity_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -69,6 +70,15 @@ public class MenuParam extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+
+        if (id == R.id.Acceuil_item) {
+            startActivity(new Intent(getApplicationContext(),ChoixLangues.class));
+        }
+
+        if (id == R.id.Parametres_item) {
+            startActivity(new Intent(getApplicationContext(), Parametres.class));
+        }
+
 
         //noinspection SimplifiableIfStatement
 

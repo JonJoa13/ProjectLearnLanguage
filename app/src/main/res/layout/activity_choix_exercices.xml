@@ -8,14 +8,14 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.mycompany.projectlanguage.ChoixExercices">
+    android:paddingTop="@dimen/activity_vertical_margin">
 
     <Button
         android:text="Retour"
         android:layout_height="wrap_content"
         android:id="@+id/button8"
-        android:layout_width="114dp" />
+        android:layout_width="114dp"
+        android:onClick="onClickBackToChoixDifficulte" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -23,7 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button8"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="19dp">
+        android:layout_marginTop="19dp"
+        android:layout_alignParentLeft="true">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -36,7 +37,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/Exercice1"
                 android:layout_weight="35"
-                android:textAlignment="textStart" />
+                android:textAlignment="textStart"
+                android:onClick="onClickVocabulaire" />
 
             <CheckBox
                 android:text="Réussi"
@@ -57,7 +59,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/Exercice2"
                 android:layout_weight="35"
-                android:textAlignment="textStart" />
+                android:textAlignment="textStart"
+                android:onClick="onClickChoixMultiples" />
 
             <CheckBox
                 android:text="Réussi"
@@ -79,7 +82,8 @@
                 android:id="@+id/Exercice3"
                 android:layout_weight="35"
                 android:elevation="0dp"
-                android:textAlignment="textStart" />
+                android:textAlignment="textStart"
+                android:onClick="onClickTextesTrous" />
 
             <CheckBox
                 android:text="Réussi"

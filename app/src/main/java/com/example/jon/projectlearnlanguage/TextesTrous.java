@@ -16,16 +16,16 @@ public class TextesTrous extends AppCompatActivity {
         setContentView(R.layout.activity_textes_trous);
     }
 
-    public void onClickRetour(View w){
+    public void onClickBackToChoixExercicesFromTextesTrous(View w){
         Intent intent = new Intent(TextesTrous.this,ChoixExercices.class);
         startActivity(intent);
     }
 
-    public void onClickControl(View w){
+    public void onClickControlTextesTrous(View w){
 
     }
 
-    public void onClickContinue(View w){
+    public void onClickContinueFromTextesTrous(View w){
         Intent intent = new Intent(TextesTrous.this,ChoixExercices.class);
         startActivity(intent);
     }
