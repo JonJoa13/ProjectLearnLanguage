@@ -11,7 +11,7 @@
         android:layout_marginBottom="30dp">
 
         <TextView
-            android:text="LearnMe"
+            android:text="@string/tv_titel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tv_titel"
@@ -20,7 +20,7 @@
             android:layout_marginTop="20dp" />
 
         <TextView
-            android:text="Veuillez vous inscrire avant d'utiliser notre application !"
+            android:text="@string/tv_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tv_content"
@@ -29,7 +29,7 @@
             android:layout_marginTop="20dp" />
 
         <TextView
-            android:text="Nom"
+            android:text="@string/tv_nom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tv_nom"
@@ -40,14 +40,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Nom"
+            android:text="@string/et_name"
             android:ems="10"
             android:id="@+id/et_name"
             android:background="?attr/colorButtonNormal"
             android:minHeight="30dp" />
 
         <TextView
-            android:text="Prénom"
+            android:text="@string/tv_prenom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tv_prenom"
@@ -58,14 +58,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Prénom"
+            android:text="@string/et_firstname"
             android:ems="10"
             android:id="@+id/et_firstname"
             android:background="?attr/colorButtonNormal"
             android:minHeight="30dp" />
 
         <TextView
-            android:text="E-mail"
+            android:text="@string/tv_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tv_email"
@@ -78,12 +78,12 @@
             android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/et_email"
-            android:text="E-mail"
+            android:text="@string/et_email"
             android:background="?attr/colorButtonNormal"
             android:minHeight="30dp" />
 
         <TextView
-            android:text="Mot de passe"
+            android:text="@string/tv_mdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tv_mdp"
@@ -94,9 +94,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:id="@+id/et_password"
+            android:id="@+id/et_mdp"
             android:inputType="textPassword"
-            android:text="Mot de passe"
+            android:text="@string/et_mdp"
             android:background="?attr/colorButtonNormal"
             android:minHeight="30dp" />
     </LinearLayout>
@@ -107,14 +107,14 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:text="S'inscrire"
+            android:text="@string/btn_subscribe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_subscribe"
             android:onClick="onClickChoixLanguesFromInscription" />
 
         <Button
-            android:text="Login"
+            android:text="@string/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_login"

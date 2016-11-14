@@ -10,9 +10,9 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <Button
-        android:text="Retour"
+        android:text="@string/btn_back"
         android:layout_height="wrap_content"
-        android:id="@+id/button6"
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:onClick="onClickBackToVoc" />
 
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Vocabulaire"
-        android:layout_below="@+id/button6"
+        android:layout_below="@+id/btn_back"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true">
 
@@ -29,7 +29,7 @@
             android:text="@string/Vocabulaire"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
+            android:id="@+id/tv_voc"
             android:textAlignment="center"
             android:textSize="36sp"
             android:layout_below="@+id/BackToVocabulaire"
@@ -38,10 +38,10 @@
             android:layout_alignParentLeft="true" />
 
         <TextView
-            android:text="Complétez le vocabulaire"
+            android:text="@string/tv_completeVoc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2"
+            android:id="@+id/tv_completeVoc"
             android:textAlignment="center"
             android:textColor="@android:color/black" />
 
@@ -190,7 +190,7 @@
         android:text="Vérifier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/btn_verify"
         android:layout_marginBottom="12dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

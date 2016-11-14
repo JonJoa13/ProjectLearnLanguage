@@ -5,7 +5,7 @@
     android:weightSum="1">
 
     <TextView
-        android:text="LearnMe"
+        android:text="@string/tv_titel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_titel"
@@ -16,7 +16,7 @@
         android:layout_weight="0.07" />
 
     <TextView
-        android:text="E-mail"
+        android:text="@string/tv_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_email"
@@ -36,10 +36,11 @@
         android:minHeight="40dp"
         android:paddingLeft="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp" />
+        android:layout_marginRight="5dp"
+        android:text="@string/et_email" />
 
     <TextView
-        android:text="Mot de passe"
+        android:text="@string/tv_mdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_mdp"
@@ -60,10 +61,11 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:fontFamily="sans-serif"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:text="@string/et_mdp" />
 
     <Button
-        android:text="Se connecter"
+        android:text="@string/btn_connection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_connection"
@@ -74,7 +76,7 @@
         android:onClick="onClickChoixLanguesFromLogin" />
 
     <Button
-        android:text="S'inscrire"
+        android:text="@string/btn_subscribe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_subscribe"

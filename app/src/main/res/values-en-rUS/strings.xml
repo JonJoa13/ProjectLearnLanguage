@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProjectLearnLanguage</string>
+
+    <string name="title_activity_menu">Menu</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <string name="menu_slider">Menu</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_cours">Cours</string>
+    <string name="nav_param">Settings</string>
+
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Cours</item>
+        <item>Settings</item>
+    </string-array>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- activity_change_pwd -->
+    <string name="tv_changemdp">Change password</string>
+    <string name="et_mdpactuel">Current password</string>
+    <string name="et_newmdp">New password</string>
+    <string name="et_confirmmdp">Confirm new password</string>
+
+    <!-- activity_choix_difficulte -->
+    <string name="DifficultyBegginer">Begginer cours</string>
+    <string name="DifficultyAdvanced">Advanced cours</string>
+    <string name="DifficutlyExpert">Expert cours</string>
+
+    <!-- activity_choix_exercices -->
+    <string name="Exercice1">Exercise 1: Vocabulary</string>
+    <string name="Exercice2">Exercise 2: Multiple choice</string>
+    <string name="Exercice3">Exercise 3: Words in the gaps</string>
+
+    <!-- activity_choix_langues -->
+    <string name="LearnFrench">Learn french</string>
+    <string name="LearnEnglish">learn english</string>
+
+    <!-- activity_choix_multiples -->
+    <string name="tv_choixMulti">Multiple choice</string>
+    <string name="tv_selectAnswer">Select the right answer</string>
+    <string name="tv_red">Red</string>
+    <string name="btn_red">Rouge</string>
+    <string name="btn_blue">Bleu</string>
+    <string name="btn_green">Vert</string>
+    <string name="tv_correct">Right!</string>
+
+    <!-- activity_inscription && activity_login-->
+    <string name="tv_titel">LearnMe</string>
+    <string name="tv_content">Before using our application, please subscribe! </string>
+    <string name="tv_nom">Name</string>
+    <string name="et_name">Name</string>
+    <string name="tv_prenom">Firstname</string>
+    <string name="et_firstname">Firstname</string>
+    <string name="tv_email">E-mail</string>
+    <string name="et_email">E-mail</string>
+    <string name="tv_mdp">Password</string>
+    <string name="et_mdp">Password</string>
+
+    <!-- activity_menu-->
+    <string name="activity_title_home">Home</string>
+    <string name="activity_title_param">Settings</string>
+
+    <!-- activity_nav_language -->
+    <string name="tv_boardlanguage">Board language</string>
+    <string name="tv_selectLanguage">Select the wished language</string>
+    <string name="btn_fr">French</string>
+    <string name="btn_en">English</string>
+
+    <!-- activity_parametres -->
+    <string name="tv_compte">Account</string>
+    <string name="tv_userEmail">abc@test.ch</string>
+    <string name="tv_general">General</string>
+
+    <!-- activity_textes_trous -->
+    <string name="tv_texteTrou">Words in the gaps</string>
+    <string name="tv_question1">"Le ciel est ____"</string>
+    <string name="tv_question2">"The sky is ____"</string>
+
+    <!-- activity_vocabulaire -->
+    <string name="Vocabulaire">Vocabulary</string>
+    <string name="RuleVocabulary">Study vocabulary</string>
+    <string name="Rouge">Red</string>
+    <string name="Bleu">Blue</string>
+    <string name="Blanc">White</string>
+    <string name="Vert">Green</string>
+    <string name="Orange_FR">Orange</string>
+    <string name="Red">Rouge</string>
+    <string name="Blue">Bleu</string>
+    <string name="White">Blanc</string>
+    <string name="Green">Vert</string>
+    <string name="Organce_EN">Orange</string>
+    <string name="tv_tester">When you are ready, click on Test</string>
+
+    <!-- activity_vocabulaire_test -->
+    <string name="tv_completeVoc">Complete vocaulary</string>
+
+    <!-- BTN -->
+    <string name="btn_back">Back</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_menu">Menu</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_connection">Connect</string>
+    <string name="btn_subscribe">Subscribe</string>
+    <string name="btn_modifierMDP">Edit password</string>
+    <string name="btn_disconnect">Disconnect</string>
+    <string name="btn_boardLanguage">Board language</string>
+    <string name="btn_test">Test</string>
+    <string name="btn_verify">Verify</string>
+    <string name="btn_login">Login</string>
+
+</resources>

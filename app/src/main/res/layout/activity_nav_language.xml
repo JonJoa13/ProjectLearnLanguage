@@ -4,14 +4,14 @@
     android:layout_height="match_parent">
 
     <Button
-        android:text="Retour"
+        android:text="@string/btn_back"
         android:layout_height="wrap_content"
         android:id="@+id/btn_back"
         android:layout_width="114dp"
         android:onClick="onClickBackToParamFromNavLanguage" />
 
     <TextView
-        android:text="Langue de navigation"
+        android:text="@string/tv_boardlanguage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_boardlanguage"
@@ -21,7 +21,7 @@
         android:layout_marginTop="20dp" />
 
     <TextView
-        android:text="Sélectionnez la langue souhaitée"
+        android:text="@string/tv_selectLanguage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_selectLanguage"
@@ -30,7 +30,7 @@
         android:textAlignment="center" />
 
     <Button
-        android:text="Français"
+        android:text="@string/btn_fr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_fr"
@@ -38,19 +38,13 @@
         android:layout_marginTop="20dp" />
 
     <Button
-        android:text="Anglais"
+        android:text="@string/btn_en"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_en" />
 
     <Button
-        android:text="Allemand"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_de" />
-
-    <Button
-        android:text="Modifier"
+        android:text="@string/btn_edit"
         android:layout_height="wrap_content"
         android:id="@+id/btn_edit"
         android:layout_width="222dp"

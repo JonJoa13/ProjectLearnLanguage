@@ -11,9 +11,9 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <Button
-        android:text="Menu"
+        android:text="@string/btn_menu"
         android:layout_height="wrap_content"
-        android:id="@+id/button11"
+        android:id="@+id/btn_menu"
         android:layout_width="114dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
-        android:layout_below="@+id/button11"
+        android:layout_below="@+id/btn_menu"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -38,7 +38,7 @@
             android:onClick="onClickIChoixDifficulte"/>
 
         <Button
-            android:text="@string/LearnGerman"
+            android:text="@string/LearnEnglish"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/LearnEnglish"

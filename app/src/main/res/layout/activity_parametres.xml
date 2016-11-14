@@ -5,16 +5,16 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="Compte"
+        android:text="@string/tv_compte"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_compe"
+        android:id="@+id/tv_compte"
         android:textSize="18sp"
         android:layout_marginTop="20dp"
         android:paddingLeft="5dp" />
 
     <TextView
-        android:text="abc@test.ch"
+        android:text="@string/tv_userEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_userEmail"
@@ -24,23 +24,23 @@
         android:textColor="@android:color/black" />
 
     <Button
-        android:text="Modifier mon mot de passe"
+        android:text="@string/btn_modifierMDP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button13"
+        android:id="@+id/btn_modifierMDP"
         android:layout_marginTop="10dp"
         android:onClick="onClickModifyMDPFromParam" />
 
     <Button
-        android:text="Se déconnecter"
+        android:text="@string/btn_disconnect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button14"
+        android:id="@+id/btn_disconnect"
         android:layout_marginTop="20dp"
         android:onClick="onClickLogout" />
 
     <TextView
-        android:text="Général"
+        android:text="@string/tv_general"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_general"
@@ -49,10 +49,10 @@
         android:paddingLeft="5dp" />
 
     <Button
-        android:text="Langue de navigation"
+        android:text="@string/btn_boardLanguage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button15"
+        android:id="@+id/btn_boardLanguage"
         android:onClick="onClickNavLanguage" />
 
 </LinearLayout>

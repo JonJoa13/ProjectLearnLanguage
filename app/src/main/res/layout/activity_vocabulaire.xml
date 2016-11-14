@@ -11,10 +11,10 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <TextView
-        android:text='Cliquer sur "Tester lorsque vous êtes prêt'
+        android:text="@string/tv_tester"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Tester"
+        android:id="@+id/tv_tester"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="73dp"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:id="@+id/Vocabulaire"
-        android:layout_below="@+id/button7"
+        android:layout_below="@+id/btn_back"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true">
 
@@ -36,7 +36,7 @@
             android:text="@string/Vocabulaire"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
+            android:id="@+id/tv_voc"
             android:textAlignment="center"
             android:textSize="36sp"
             android:layout_below="@+id/BackToVocabulaire"
@@ -48,7 +48,7 @@
             android:text="@string/RuleVocabulary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2"
+            android:id="@+id/tv_studyVoc"
             android:textAlignment="center"
             android:textColor="@android:color/black" />
 
@@ -144,7 +144,7 @@
                     android:text="@string/Green"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView9"
+                    android:id="@+id/Green"
                     android:textSize="30sp"
                     android:textColor="@android:color/black"
                     android:background="?attr/colorButtonNormal" />
@@ -153,7 +153,7 @@
                     android:text="@string/Organce_EN"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView8"
+                    android:id="@+id/Orange"
                     android:textSize="30sp"
                     android:textColor="@android:color/black" />
             </LinearLayout>
@@ -162,19 +162,19 @@
     </LinearLayout>
 
     <Button
-        android:text="Tester"
+        android:text="@string/btn_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/btn_test"
         android:layout_marginBottom="14dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="onClickTestVoc" />
 
     <Button
-        android:text="Retour"
+        android:text="@string/btn_back"
         android:layout_height="wrap_content"
-        android:id="@+id/button7"
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
