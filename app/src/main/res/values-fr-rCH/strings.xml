@@ -1,118 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <string name="app_name">ProjectLearnLanguage</string>
+    <string name="app_name">ProjectLearnLanguage</string>
 
-        <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_menu">Menu</string>
 
-        <string name="navigation_drawer_open">Open navigation drawer</string>
-        <string name="navigation_drawer_close">Close navigation drawer</string>
-        <string name="openDrawer">open_drawer</string>
-        <string name="closeDrawer">close_drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
 
-        <string name="menu_slider">Menu</string>
-        <string name="nav_home">Accueil</string>
-        <string name="nav_cours">Cours</string>
-        <string name="nav_param">Parametres</string>
+    <string name="menu_slider">Menu</string>
+    <string name="nav_home">Accueil</string>
+    <string name="nav_cours">Cours</string>
+    <string name="nav_param">Parametres</string>
 
-        <string-array name="nav_item_activity_titles">
-            <item>Accueil</item>
-            <item>Cours</item>
-            <item>Parametres</item>
-        </string-array>
+    <string-array name="nav_item_activity_titles">
+        <item>Accueil</item>
+        <item>Cours</item>
+        <item>Parametres</item>
+    </string-array>
 
-        <string name="action_settings">Settings</string>
+    <string name="action_settings">Parametres</string>
 
-        <!-- activity_change_pwd -->
-        <string name="tv_changemdp">Changer mot de passe</string>
-        <string name="et_mdpactuel">Mot de passe actuel</string>
-        <string name="et_newmdp">Nouveau mot de passe</string>
-        <string name="et_confirmmdp">Confirmer nouveau mot de passe</string>
+    <!-- activity_select_action -->
+    <string name="GoToUser">Utilisateurs</string>
+    <string name="GotoCours">Cours</string>
+    <string name="GoToExercise">Exercices</string>
 
-        <!-- activity_choix_difficulte -->
-        <string name="DifficultyBegginer">Cours débutants</string>
-        <string name="DifficultyAdvanced">Cours intermédiraires</string>
-        <string name="DifficutlyExpert">Cours experts</string>
+    <!-- activity_welcome_page -->
+    <string name="EditorMode">Mode editeur</string>
+    <string name="AppMode">Mode utilisateur</string>
 
-        <!-- activity_choix_exercices -->
-        <string name="Exercice1">Exercice 1: Vocabulaire</string>
-        <string name="Exercice2">Exercice 2: Choix multiples</string>
-        <string name="Exercice3">Exercice 3: Textes à trous</string>
+    <!-- activity_add_exercise_to_cours -->
+    <string name="addEx">Ajouter</string>
 
-        <!-- activity_choix_langues -->
-        <string name="LearnFrench">Apprendre le français</string>
-        <string name="LearnEnglish">Apprendre  l\'anglais</string>
+    <!-- activity_create_exercise -->
+    <string name="ce_title">Titre</string>
+    <string name="ce_type">Type</string>
+    <string name="ce_content">Donnee</string>
+    <string name="ce_choice">Choix</string>
+    <string name="ce_solution">Solution</string>
 
-        <!-- activity_choix_multiples -->
-        <string name="tv_choixMulti">Choix multiples</string>
-        <string name="tv_selectAnswer">Sélectionnez la bonne réponse</string>
-        <string name="tv_red">Rouge</string>
-        <string name="btn_red">Red</string>
-        <string name="btn_blue">Blue</string>
-        <string name="btn_green">Green</string>
-        <string name="tv_correct">Correct!</string>
+    <!-- activity_modify_delete_cours -->
+    <string name="addExercise">Ajouter exercice</string>
 
-        <!-- activity_inscription && activity_login-->
-        <string name="tv_titel">LearnMe</string>
-        <string name="tv_content">Veuillez vous inscrire avant d\'utiliser notre application !</string>
-        <string name="tv_nom">Nom</string>
-        <string name="et_name">Nom</string>
-        <string name="tv_prenom">Prénom</string>
-        <string name="et_firstname">Prénom</string>
-        <string name="tv_email">E-mail</string>
-        <string name="et_email">E-mail</string>
-        <string name="tv_mdp">Mot de passe</string>
-        <string name="et_mdp">Mot de passe</string>
+    <!-- activity_create_cours -->
+    <string name="cc_cours">Cours</string>
+    <string name="cc_level">Niveau</string>
 
-        <!-- activity_menu-->
-        <string name="activity_title_home">Accueil</string>
-        <string name="activity_title_param">Parametres</string>
+    <!-- activity_EditorZone -->
+    <string name="ez_create">Creer</string>
+    <string name="ez_modify">Modifier</string>
+    <string name="ez_delete">Supprimer</string>
 
-        <!-- activity_nav_language -->
-        <string name="tv_boardlanguage">Langue de navigation</string>
-        <string name="tv_selectLanguage">Sélectionnez la langue souhaitée</string>
-        <string name="btn_fr">Français</string>
-        <string name="btn_en">Anglais</string>
+    <!-- activity_change_pwd -->
+    <string name="tv_changemdp">Changer mot de passe</string>
+    <string name="et_mdpactuel">Mot de passe actuel</string>
+    <string name="et_newmdp">Nouveau mot de passe</string>
+    <string name="et_confirmmdp">Confirmer nouveau mot de passe</string>
 
-        <!-- activity_parametres -->
-        <string name="tv_compte">Compte</string>
-        <string name="tv_userEmail">abc@test.ch</string>
-        <string name="tv_general">Général</string>
+    <!-- activity_choix_difficulte -->
+    <string name="DifficultyBegginer">Cours débutants</string>
+    <string name="DifficultyAdvanced">Cours intermédiraires</string>
+    <string name="DifficutlyExpert">Cours experts</string>
 
-        <!-- activity_textes_trous -->
-        <string name="tv_texteTrou">Textes à trous</string>
-        <string name="tv_question1">"The sky is ____"</string>
-        <string name="tv_question2">"Le ciel est ____"</string>
+    <!-- activity_choix_exercices -->
+    <string name="Exercice1">Exercice 1: Vocabulaire</string>
+    <string name="Exercice2">Exercice 2: Choix multiples</string>
+    <string name="Exercice3">Exercice 3: Textes à trous</string>
 
-        <!-- activity_vocabulaire -->
-        <string name="Vocabulaire">Vocabulaire</string>
-        <string name="RuleVocabulary">Etudiez le vocabulaire</string>
-        <string name="Rouge">Rouge</string>
-        <string name="Bleu">Bleu</string>
-        <string name="Blanc">Blanc</string>
-        <string name="Vert">Vert</string>
-        <string name="Orange_FR">Orange</string>
-        <string name="Red">Red</string>
-        <string name="Blue">Blue</string>
-        <string name="White">White</string>
-        <string name="Green">Green</string>
-        <string name="Organce_EN">Orange</string>
-        <string name="tv_tester">Cliquer sur "Tester" lorsque vous êtes prêt</string>
+    <!-- activity_choix_langues -->
+    <string name="LearnFrench">Apprendre le français</string>
+    <string name="LearnEnglish">Apprendre  l\'anglais</string>
 
-        <!-- activity_vocabulaire_test -->
-        <string name="tv_completeVoc">Complétez le vocabulaire</string>
+    <!-- activity_choix_multiples -->
+    <string name="tv_choixMulti">Choix multiples</string>
+    <string name="tv_selectAnswer">Sélectionnez la bonne réponse</string>
+    <string name="tv_red">Rouge</string>
+    <string name="btn_red">Red</string>
+    <string name="btn_blue">Blue</string>
+    <string name="btn_green">Green</string>
+    <string name="tv_correct">Correct!</string>
 
-        <!-- BTN -->
-        <string name="btn_back">Retour</string>
-        <string name="btn_edit">Modifier</string>
-        <string name="btn_menu">Menu</string>
-        <string name="btn_continue">Continuer</string>
-        <string name="btn_connection">Connection</string>
-        <string name="btn_subscribe">S\'inscrire</string>
-        <string name="btn_modifierMDP">Modifier mon mot de passe</string>
-        <string name="btn_disconnect">Se déconnecter</string>
-        <string name="btn_boardLanguage">Langue de navigation</string>
-        <string name="btn_test">Tester</string>
-        <string name="btn_verify">Vérifier</string>
-        <string name="btn_login">Login</string>
+    <!-- activity_inscription && activity_login-->
+    <string name="tv_titel">LearnMe</string>
+    <string name="tv_content">Veuillez vous inscrire avant d\'utiliser notre application !</string>
+    <string name="tv_nom">Nom</string>
+    <string name="et_name">Nom</string>
+    <string name="tv_prenom">Prénom</string>
+    <string name="et_firstname">Prénom</string>
+    <string name="tv_email">E-mail</string>
+    <string name="et_email">E-mail</string>
+    <string name="tv_mdp">Mot de passe</string>
+    <string name="et_mdp">Mot de passe</string>
+
+    <!-- activity_menu-->
+    <string name="activity_title_home">Accueil</string>
+    <string name="activity_title_param">Parametres</string>
+
+    <!-- activity_nav_language -->
+    <string name="tv_boardlanguage">Langue de navigation</string>
+    <string name="tv_selectLanguage">Sélectionnez la langue souhaitée</string>
+    <string name="btn_fr">Français</string>
+    <string name="btn_en">Anglais</string>
+
+    <!-- activity_parametres -->
+    <string name="tv_compte">Compte</string>
+    <string name="tv_userEmail">abc@test.ch</string>
+    <string name="tv_general">Général</string>
+
+    <!-- activity_textes_trous -->
+    <string name="tv_texteTrou">Textes à trous</string>
+    <string name="tv_question1">"The sky is ____"</string>
+    <string name="tv_question2">"Le ciel est ____"</string>
+
+    <!-- activity_vocabulaire -->
+    <string name="Vocabulaire">Vocabulaire</string>
+    <string name="RuleVocabulary">Etudiez le vocabulaire</string>
+    <string name="Rouge">Rouge</string>
+    <string name="Bleu">Bleu</string>
+    <string name="Blanc">Blanc</string>
+    <string name="Vert">Vert</string>
+    <string name="Orange_FR">Orange</string>
+    <string name="Red">Red</string>
+    <string name="Blue">Blue</string>
+    <string name="White">White</string>
+    <string name="Green">Green</string>
+    <string name="Organce_EN">Orange</string>
+    <string name="tv_tester">Cliquer sur "Tester" lorsque vous êtes prêt</string>
+
+    <!-- activity_vocabulaire_test -->
+    <string name="tv_completeVoc">Complétez le vocabulaire</string>
+
+    <!-- BTN -->
+    <string name="btn_back">Retour</string>
+    <string name="btn_edit">Modifier</string>
+    <string name="btn_menu">Menu</string>
+    <string name="btn_continue">Continuer</string>
+    <string name="btn_connection">Connection</string>
+    <string name="btn_subscribe">S\'inscrire</string>
+    <string name="btn_modifierMDP">Modifier mon mot de passe</string>
+    <string name="btn_disconnect">Se déconnecter</string>
+    <string name="btn_boardLanguage">Langue de navigation</string>
+    <string name="btn_test">Tester</string>
+    <string name="btn_verify">Vérifier</string>
+    <string name="btn_login">Login</string>
 
 </resources>

@@ -21,6 +21,38 @@
 
     <string name="action_settings">Settings</string>
 
+
+    <!-- activity_select_action -->
+    <string name="GoToUser">Utilisateurs</string>
+    <string name="GotoCours">Cours</string>
+    <string name="GoToExercise">Exercices</string>
+
+    <!-- activity_welcome_page -->
+    <string name="EditorMode">Mode editeur</string>
+    <string name="AppMode">Mode utilisateur</string>
+
+    <!-- activity_add_exercise_to_cours -->
+    <string name="addEx">Ajouter</string>
+
+    <!-- activity_create_exercise -->
+    <string name="ce_title">Titre</string>
+    <string name="ce_type">Type</string>
+    <string name="ce_content">Donnee</string>
+    <string name="ce_choice">Choix</string>
+    <string name="ce_solution">Solution</string>
+
+    <!-- activity_modify_delete_cours -->
+    <string name="addExercise">Ajouter exercice</string>
+
+    <!-- activity_create_cours -->
+    <string name="cc_cours">Cours</string>
+    <string name="cc_level">Niveau</string>
+
+    <!-- activity_EditorZone -->
+    <string name="ez_create">Creer</string>
+    <string name="ez_modify">Modifier</string>
+    <string name="ez_delete">Supprimer</string>
+
     <!-- activity_change_pwd -->
     <string name="tv_changemdp">Changer mot de passe</string>
     <string name="et_mdpactuel">Mot de passe actuel</string>

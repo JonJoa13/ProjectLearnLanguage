@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.jon.projectlearnlanguage.EditorZone.CreateUser"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp">
+
+        <TextView
+            android:text="@string/tv_titel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_titel"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:text="@string/ce_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ce_titel"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="@string/ce_title"
+            android:ems="10"
+            android:id="@+id/et_titel"
+            android:background="?attr/colorButtonNormal"
+            android:minHeight="30dp" />
+
+        <TextView
+            android:text="@string/ce_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_type"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="@string/ce_type"
+            android:ems="10"
+            android:id="@+id/et_type"
+            android:background="?attr/colorButtonNormal"
+            android:minHeight="30dp" />
+
+        <TextView
+            android:text="@string/ce_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_content"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/et_content"
+            android:text="@string/ce_content"
+            android:background="?attr/colorButtonNormal"
+            android:minHeight="30dp" />
+
+        <TextView
+            android:text="@string/ce_choice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_choice"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/et_choice"
+            android:inputType="text"
+            android:text="@string/ce_choice"
+            android:background="?attr/colorButtonNormal"
+            android:minHeight="30dp" />
+
+        <TextView
+            android:text="@string/ce_solution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_solution"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/et_solution"
+            android:inputType="text"
+            android:text="@string/ce_solution"
+            android:background="?attr/colorButtonNormal"
+            android:minHeight="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="@string/ez_modify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_modifyExercise"
+            android:onClick="onClickChoixLanguesFromInscription" />
+
+        <Button
+            android:text="@string/ez_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_deleteExercise" />
+
+    </LinearLayout>
+
+</LinearLayout>

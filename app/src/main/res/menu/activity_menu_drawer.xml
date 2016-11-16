@@ -4,11 +4,11 @@
 
     <item
         android:icon="@drawable/ic_action_home"
-        android:title="Accueil"
+        android:title="@string/activity_title_home"
         android:id="@+id/Accueil" />
     <item
         android:icon="@drawable/ic_settings"
-        android:title="Parametres"
+        android:title="@string/activity_title_param"
         android:id="@+id/Parametres" />
 
 </menu>

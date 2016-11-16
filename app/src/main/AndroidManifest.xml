@@ -14,13 +14,7 @@
         <activity android:name=".ChoixLangues" />
         <activity android:name=".ChoixMultiples" />
         <activity android:name=".Inscription" />
-        <activity android:name=".Login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".Login" />
         <activity android:name=".NavLanguage" />
         <activity android:name=".Parametres" />
         <activity android:name=".TextesTrous" />
@@ -29,7 +23,25 @@
         <activity
             android:name=".MenuParam"
             android:label="@string/title_activity_menu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EditorZone.CreateUser" />
+        <activity android:name=".EditorZone.ModifyDeleteUser" />
+        <activity android:name=".EditorZone.CreateCours" />
+        <activity android:name=".EditorZone.ModifyDeleteCours" />
+        <activity android:name=".EditorZone.CreateExercise" />
+        <activity android:name=".EditorZone.ModifyDeleteExercise" />
+        <activity android:name=".EditorZone.AddExerciseToCours" />
+        <activity android:name=".WelcomePage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".EditorZone.SelectAction" />
+        <activity android:name=".EditorZone.UserView" />
+        <activity android:name=".EditorZone.CoursView" />
+        <activity android:name=".EditorZone.ExerciseView"></activity>
     </application>
 
 </manifest>
