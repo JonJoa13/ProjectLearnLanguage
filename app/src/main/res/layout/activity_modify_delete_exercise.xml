@@ -11,12 +11,18 @@
     tools:context="com.example.jon.projectlearnlanguage.EditorZone.CreateUser"
     android:orientation="vertical">
 
+    <Button
+        android:text="@string/btn_back"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_backToSelectActionFromCW"
+        android:layout_width="wrap_content"
+        android:onClick="onClickBackToExerciseView"/>
+
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:text="@string/tv_titel"
@@ -24,8 +30,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tv_titel"
             android:textSize="30sp"
-            android:textAlignment="center"
-            android:layout_marginTop="20dp" />
+            android:textAlignment="center" />
 
         <TextView
             android:text="@string/ce_title"
@@ -128,13 +133,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_modifyExercise"
-            android:onClick="onClickChoixLanguesFromInscription" />
+            android:onClick="onClickModifyEx" />
 
         <Button
             android:text="@string/ez_delete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_deleteExercise" />
+            android:id="@+id/btn_deleteExercise"
+            android:onClick="onClickDeleteEx"/>
 
     </LinearLayout>
 

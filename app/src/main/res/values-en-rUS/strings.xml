@@ -22,6 +22,11 @@
 
     <string name="action_settings">Settings</string>
 
+    <!-- activity_..._view -->
+    <string name="AddNewEx">Add new exercise</string>
+    <string name="AddNewCours">Add new cours</string>
+    <string name="AddNewUser">Add new user</string>
+
     <!-- activity_select_action -->
     <string name="GoToUser">Users</string>
     <string name="GotoCours">Cours</string>
@@ -50,7 +55,7 @@
 
     <!-- activity_EditorZone -->
     <string name="ez_create">Create</string>
-    <string name="ez_modify">Modifiy</string>
+    <string name="ez_modify">Modify</string>
     <string name="ez_delete">Delete</string>
 
     <!-- activity_change_pwd -->

@@ -11,6 +11,13 @@
     tools:context="com.example.jon.projectlearnlanguage.EditorZone.CreateUser"
     android:orientation="vertical">
 
+    <Button
+        android:text="@string/btn_back"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_backToSelectActionFromCW"
+        android:layout_width="wrap_content"
+        android:onClick="onClickBackToUserView"/>
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -110,14 +117,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_modifyUser"
-            android:onClick="onClickChoixLanguesFromInscription" />
+            android:onClick="onClickModifyUser" />
 
         <Button
             android:text="@string/ez_delete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_deleteUser"
-            android:onClick="onClickLoginFromInscription" />
+            android:onClick="onClickDeleteUser" />
 
     </LinearLayout>
 

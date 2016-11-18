@@ -9,13 +9,21 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jon.projectlearnlanguage.EditorZone.CreateUser"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
 
+    <Button
+        android:text="@string/btn_back"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_backToSelectActionFromCW"
+        android:layout_width="wrap_content"
+        android:onClick="onClickBackToSelectAction"/>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="431dp">
+        android:layout_height="355dp"
+        android:layout_weight="1.08">
 
         <TextView
             android:text="@string/tv_titel"
@@ -39,10 +47,18 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:text="@string/AddNewCours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_AddNewCours"
+            android:onClick="onClickGoToAddNewCours"/>
+
+        <Button
             android:text="@string/ez_modify"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_goToModifyCours" />
+            android:id="@+id/btn_goToModifyCours"
+            android:onClick="onClickGoToModifyDeleteCours"/>
 
     </LinearLayout>
 

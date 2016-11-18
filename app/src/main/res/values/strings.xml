@@ -21,6 +21,10 @@
 
     <string name="action_settings">Settings</string>
 
+    <!-- activity_..._view -->
+    <string name="AddNewEx">Ajouter nouvel exercice</string>
+    <string name="AddNewCours">Ajouter nouveau cours</string>
+    <string name="AddNewUser">Ajouter nouvel utilisateur</string>
 
     <!-- activity_select_action -->
     <string name="GoToUser">Utilisateurs</string>

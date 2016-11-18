@@ -22,15 +22,17 @@ android:weightSum="1">
     android:layout_marginTop="20dp"
     android:layout_marginBottom="150dp" />
 
-<Button
-    android:text="@string/EditorMode"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/btn_editorMode" />
+    <Button
+        android:text="@string/EditorMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_editorMode"
+        android:onClick="onClickEditorMode" />
 
-<Button
+    <Button
     android:text="@string/AppMode"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/button2" />
+    android:id="@+id/button2"
+        android:onClick="onClickUserMode" />
 </LinearLayout>

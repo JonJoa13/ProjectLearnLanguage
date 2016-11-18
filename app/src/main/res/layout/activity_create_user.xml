@@ -11,6 +11,12 @@
     tools:context="com.example.jon.projectlearnlanguage.EditorZone.CreateUser"
     android:orientation="vertical">
 
+    <Button
+        android:text="@string/btn_back"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_backToSelectActionFromCW"
+        android:layout_width="wrap_content"
+        android:onClick="onClickBackToUserView" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -109,7 +115,8 @@
             android:text="@string/ez_create"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_createUser" />
+            android:id="@+id/btn_createUser"
+            android:onClick="onClickCreateUser" />
 
     </LinearLayout>
 

@@ -14,8 +14,9 @@
     <Button
         android:text="@string/btn_back"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_back"
-        android:layout_width="wrap_content" />
+        android:id="@+id/btn_backToSelectActionFromCW"
+        android:layout_width="wrap_content"
+        android:onClick="onClickBackToWelcomePage" />
 
             <TextView
             android:text="@string/tv_titel"
@@ -37,19 +38,22 @@
                 android:text="@string/GoToUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/GoToUserView" />
+                android:id="@+id/GoToUserView"
+                android:onClick="onClickSelectUsers" />
 
             <Button
                 android:text="@string/GotoCours"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/GoToCoursView" />
+                android:id="@+id/GoToCoursView"
+                android:onClick="onClickSelectCours" />
 
             <Button
                 android:text="@string/GoToExercise"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/GoToExercisesView" />
+                android:id="@+id/GoToExercisesView"
+                android:onClick="onClickSelectExercises" />
 
         </LinearLayout>
 

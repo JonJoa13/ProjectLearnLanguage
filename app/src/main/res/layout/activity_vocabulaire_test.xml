@@ -12,7 +12,7 @@
     <Button
         android:text="@string/btn_back"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_back"
+        android:id="@+id/btn_backToSelectActionFromCW"
         android:layout_width="wrap_content"
         android:onClick="onClickBackToVoc" />
 
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Vocabulaire"
-        android:layout_below="@+id/btn_back"
+        android:layout_below="@+id/btn_backToSelectActionFromCW"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true">
 
