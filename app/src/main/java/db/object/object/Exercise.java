@@ -11,7 +11,6 @@ public class Exercise {
     private int idCours;
     private String donnee;
     private String solution;
-    private String choix;
 
     public int getId() {
         return id;
@@ -61,11 +60,4 @@ public class Exercise {
         this.solution = solution;
     }
 
-    public String getChoix() {
-        return choix;
-    }
-
-    public void setChoix(String choix) {
-        this.choix = choix;
-    }
 }
