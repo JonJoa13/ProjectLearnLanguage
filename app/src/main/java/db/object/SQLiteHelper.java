@@ -28,10 +28,11 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     //use a singleton
     //we want always just one instance of the database
-    private SQLiteHelper(Context context) {
+    public SQLiteHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         db = this.getWritableDatabase();
     }
+
 
     public static SQLiteHelper getInstance(Context context) {
         if (instance == null) {
@@ -45,13 +46,14 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(ChoiceEntry.CREATE_TABLE_CHOICE);
         db.execSQL(CoursEntry.CREATE_TABLE_COURS);
         db.execSQL(ExerciseEntry.CREATE_TABLE_EXERCISE);
         db.execSQL(UserEntry.CREATE_TABLE_TABLE_USER);
+        db.execSQL(ChoiceEntry.CREATE_TABLE_CHOICE);
         db.execSQL(ExerciseChoiceEntry.CREATE_TABLE_EXERCISE_CHOICE);
         db.execSQL(CoursUserEntry.CREATE_TABLE_COURS_USER);
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

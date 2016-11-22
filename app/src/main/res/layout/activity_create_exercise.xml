@@ -90,24 +90,6 @@
             android:minHeight="30dp" />
 
         <TextView
-            android:text="@string/ce_choice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_choice"
-            android:textSize="18sp"
-            android:layout_marginTop="5dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/et_choice"
-            android:inputType="text"
-            android:text="@string/ce_choice"
-            android:background="?attr/colorButtonNormal"
-            android:minHeight="30dp" />
-
-        <TextView
             android:text="@string/ce_solution"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

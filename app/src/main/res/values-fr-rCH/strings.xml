@@ -22,10 +22,15 @@
 
     <string name="action_settings">Parametres</string>
 
+    <!-- activity_choice_view -->
+    <string name="cv_description">Description</string>
+    <string name="AddChoice">Ajouter choix</string>
+
     <!-- activity_..._view -->
     <string name="AddNewEx">Ajouter nouvel exercice</string>
     <string name="AddNewCours">Ajouter nouveau cours</string>
     <string name="AddNewUser">Ajouter nouvel utilisateur</string>
+    <string name="cv_AddNewChoice">Ajouter noueau choix</string>
 
     <!-- activity_select_action -->
     <string name="GoToUser">Utilisateurs</string>

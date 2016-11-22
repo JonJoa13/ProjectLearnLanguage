@@ -9,6 +9,7 @@ import com.example.jon.projectlearnlanguage.R;
 
 public class CoursView extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
