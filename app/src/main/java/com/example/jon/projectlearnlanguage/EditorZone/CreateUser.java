@@ -25,29 +25,22 @@ public class CreateUser extends AppCompatActivity {
         Intent intent = getIntent();
         setContentView(R.layout.activity_create_user);
 
-
     }
 
-    public void onClickBackToUserView(View w){
+    public void onClickBackToUserView(View v){
         Intent intent = new Intent(CreateUser.this, UserView.class);
         startActivity(intent);
     }
 
-    public void onClickCreateUser(View w){
 
-        createUser();
-
-
-    }
-
-    public void createUser(){
+    public void onClickCreateUser(View v){
         SQLiteHelper mDbHelper = new SQLiteHelper(this);
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
         EditText editTextName,
-                editTextFirstname,
-                editTextEmail,
-                editTextMDP;
+                 editTextFirstname,
+                 editTextEmail,
+                 editTextMDP;
 
         editTextName = (EditText)findViewById(R.id.et_name);
         editTextFirstname = (EditText) findViewById(R.id.et_firstname);

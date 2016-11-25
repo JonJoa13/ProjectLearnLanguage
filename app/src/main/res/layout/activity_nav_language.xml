@@ -6,7 +6,7 @@
     <Button
         android:text="@string/btn_back"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_backToSelectActionFromCW"
+        android:id="@+id/btn_backToUserViewFromCreateUser"
         android:layout_width="114dp"
         android:onClick="onClickBackToParamFromNavLanguage" />
 

@@ -39,5 +39,9 @@ public class SelectAction extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickSelectChoice(View w){
+        Intent intent = new Intent(SelectAction.this,ChoiceView.class);
+        startActivity(intent);
+    }
 
 }

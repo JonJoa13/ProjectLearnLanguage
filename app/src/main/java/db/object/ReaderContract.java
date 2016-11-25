@@ -2,6 +2,8 @@ package db.object;
 
 import android.provider.BaseColumns;
 
+import db.object.object.Exercise;
+
 
 /**
  * Created by TheoP on 15.11.2016.
@@ -22,13 +24,15 @@ public final class ReaderContract {
         public static final String KEY_ID = "id";
         public static final String KEY_TITRE = "titre";
         public static final String KEY_LEVEL = "level";
+        public static final String KEY_NULLABLE = "";
 
         //Table Cours create statement
         public static final String CREATE_TABLE_COURS = "CREATE TABLE "
                 + CoursEntry.TABLE_COURS + "("
                 + CoursEntry.KEY_ID + " INTEGER PRIMARY KEY,"
                 + CoursEntry.KEY_TITRE + " TEXT, "
-                + CoursEntry.KEY_LEVEL + " INTEGER "
+                + CoursEntry.KEY_LEVEL + " INTEGER, "
+                + CoursEntry.KEY_NULLABLE + "TEXT"
                 + " )";
     }
 
@@ -43,6 +47,7 @@ public final class ReaderContract {
         public static final String KEY_IDCOURS = "idcours";
         public static final String KEY_DONNEE = "donnee";
         public static final String KEY_SOLUTION = "solution";
+        public static final String KEY_NULLABLE = "";
 
         //Table Exercise create statement
         public static final String CREATE_TABLE_EXERCISE = "CREATE TABLE "
@@ -52,7 +57,8 @@ public final class ReaderContract {
                 + ExerciseEntry.KEY_TYPE + " TEXT, "
                 + ExerciseEntry.KEY_IDCOURS + " INTEGER, "
                 + ExerciseEntry.KEY_DONNEE + " TEXT, "
-                + ExerciseEntry.KEY_SOLUTION + " TEXT "
+                + ExerciseEntry.KEY_SOLUTION + " TEXT, "
+                + ExerciseEntry.KEY_NULLABLE + "TEXT"
                 + " )";
     }
 
@@ -90,14 +96,16 @@ public final class ReaderContract {
         public static final String KEY_CHOICE_1 = "choice1";
         public static final String KEY_CHOICE_2 = "choice2";
         public static final String KEY_CHOICE_3 = "choice3";
+        public static final String KEY_NULLABLE = "";
 
         //Table choice create statement
         public static final String CREATE_TABLE_CHOICE = "CREATE TABLE "
                 + ChoiceEntry.TABLE_CHOICE + " ("
-                + ChoiceEntry.KEY_ID + " INTEGER PRIMARY KEY,"
-                + ChoiceEntry.KEY_CHOICE_1 + " TEXT "
-                + ChoiceEntry.KEY_CHOICE_2 + " TEXT "
-                + ChoiceEntry.KEY_CHOICE_3 + " TEXT "
+                + ChoiceEntry.KEY_ID + " INTEGER PRIMARY KEY, "
+                + ChoiceEntry.KEY_CHOICE_1 + "TEXT, "
+                + ChoiceEntry.KEY_CHOICE_2 + "TEXT, "
+                + ChoiceEntry.KEY_CHOICE_3 + "TEXT, "
+                + ChoiceEntry.KEY_NULLABLE + " TEXT"
                 + " )";
     }
 
@@ -110,6 +118,7 @@ public final class ReaderContract {
         public static final String KEY_ID = "id";
         public static final String KEY_COURS_ID = "cours_id";
         public static final String KEY_USER_ID = "user_id";
+        public static final String KEY_NULLABLE = "";
 
         //Table cours_user create statement
         public static final String CREATE_TABLE_COURS_USER = "CREATE TABLE "
@@ -117,6 +126,7 @@ public final class ReaderContract {
                 + CoursUserEntry.KEY_ID + " INTEGER PRIMARY KEY,"
                 + CoursUserEntry.KEY_COURS_ID + " INTEGER, "
                 + CoursUserEntry.KEY_USER_ID + " INTEGER, "
+                + CoursUserEntry.KEY_NULLABLE + "TEXT,"
                 + "FOREIGN KEY (" + KEY_COURS_ID + ") REFERENCES " + CoursEntry.TABLE_COURS + " (" + KEY_ID + "), "
                 + "FOREIGN KEY (" + KEY_USER_ID + ") REFERENCES " + UserEntry.TABLE_USER + " (" + KEY_ID +")"
                 + " )";
@@ -130,6 +140,7 @@ public final class ReaderContract {
         public static final String KEY_ID = "id";
         public static final String KEY_EXERCISE_ID = "exercice_id";
         public static final String KEY_CHOICE_ID = "choice_id";
+        public static final String KEY_NULLABLE = "";
 
         //Table exercice_choice create statement
         public static final String CREATE_TABLE_EXERCISE_CHOICE = "CREATE TABLE "
@@ -137,6 +148,7 @@ public final class ReaderContract {
                 + ExerciseChoiceEntry.KEY_ID + " INTEGER PRIMARY KEY,"
                 + ExerciseChoiceEntry.KEY_EXERCISE_ID + " INTEGER, "
                 + ExerciseChoiceEntry.KEY_CHOICE_ID + " INTEGER, "
+                + ExerciseChoiceEntry.KEY_NULLABLE + "TEXT,"
                 + "FOREIGN KEY (" + KEY_EXERCISE_ID + ") REFERENCES " + ExerciseEntry.TABLE_EXERCISE + " (" + KEY_ID + "), "
                 + "FOREIGN KEY (" + KEY_CHOICE_ID + ") REFERENCES " + ChoiceEntry.TABLE_CHOICE + " (" + KEY_ID +") "
                 + " )";
