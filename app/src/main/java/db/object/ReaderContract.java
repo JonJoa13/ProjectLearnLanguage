@@ -28,7 +28,7 @@ public final class ReaderContract {
 
         //Table Cours create statement
         public static final String CREATE_TABLE_COURS = "CREATE TABLE "
-                + CoursEntry.TABLE_COURS + "("
+                + CoursEntry.TABLE_COURS + " ("
                 + CoursEntry.KEY_ID + " INTEGER PRIMARY KEY,"
                 + CoursEntry.KEY_TITRE + " TEXT, "
                 + CoursEntry.KEY_LEVEL + " INTEGER, "
@@ -75,14 +75,14 @@ public final class ReaderContract {
         public static final String KEY_NULLABLE = "";
 
         //Table User create statement
-        public static final String CREATE_TABLE_TABLE_USER = "CREATE TABLE "
+        public static final String CREATE_TABLE_USER = "CREATE TABLE "
                 + UserEntry.TABLE_USER + " ("
                 + UserEntry.KEY_ID + " INTEGER PRIMARY KEY,"
                 + UserEntry.KEY_NAME + " TEXT, "
                 + UserEntry.KEY_FIRSTNAME + " TEXT, "
                 + UserEntry.KEY_EMAIL + " TEXT, "
                 + UserEntry.KEY_MDP + " TEXT, "
-                + UserEntry.KEY_NULLABLE + "TEXT"
+                + UserEntry.KEY_NULLABLE + " TEXT"
                 + " )";
     }
 
@@ -93,18 +93,20 @@ public final class ReaderContract {
 
         //Choice Column names
         public static final String KEY_ID = "id";
-        public static final String KEY_CHOICE_1 = "choice1";
-        public static final String KEY_CHOICE_2 = "choice2";
-        public static final String KEY_CHOICE_3 = "choice3";
+        public static final String KEY_DESCR = "descr";
+        public static final String KEY_CHOICE1 = "choice1";
+        public static final String KEY_CHOICE2 = "choice2";
+        public static final String KEY_CHOICE3 = "choice3";
         public static final String KEY_NULLABLE = "";
 
         //Table choice create statement
         public static final String CREATE_TABLE_CHOICE = "CREATE TABLE "
-                + ChoiceEntry.TABLE_CHOICE + " ("
-                + ChoiceEntry.KEY_ID + " INTEGER PRIMARY KEY, "
-                + ChoiceEntry.KEY_CHOICE_1 + "TEXT, "
-                + ChoiceEntry.KEY_CHOICE_2 + "TEXT, "
-                + ChoiceEntry.KEY_CHOICE_3 + "TEXT, "
+                + ChoiceEntry.TABLE_CHOICE + "("
+                + ChoiceEntry.KEY_ID + " INTEGER PRIMARY KEY,"
+                + ChoiceEntry.KEY_DESCR + " TEXT, "
+                + ChoiceEntry.KEY_CHOICE1 + " TEXT, "
+                + ChoiceEntry.KEY_CHOICE2 + " TEXT, "
+                + ChoiceEntry.KEY_CHOICE3 + " TEXT, "
                 + ChoiceEntry.KEY_NULLABLE + " TEXT"
                 + " )";
     }

@@ -35,9 +35,10 @@ public class ChoiceDataSource {
     public long createChoice(Choice choice){
         long id;
         ContentValues values = new ContentValues();
-        values.put(ChoiceEntry.KEY_CHOICE_1, choice.getChoice_1());
-        values.put(ChoiceEntry.KEY_CHOICE_2, choice.getChoice_2());
-        values.put(ChoiceEntry.KEY_CHOICE_3, choice.getChoice_3());
+        values.put(ChoiceEntry.KEY_DESCR, choice.getDescription());
+        values.put(ChoiceEntry.KEY_CHOICE1, choice.getChoice1());
+        values.put(ChoiceEntry.KEY_CHOICE2, choice.getChoice2());
+        values.put(ChoiceEntry.KEY_CHOICE3, choice.getChoice3());
 
         id = this.db.insert(ChoiceEntry.TABLE_CHOICE, null, values);
 
@@ -59,9 +60,10 @@ public class ChoiceDataSource {
 
         Choice choice = new Choice();
         choice.setId(cursor.getInt(cursor.getColumnIndex(ChoiceEntry.KEY_ID)));
-        choice.setChoice_1(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE_1)));
-        choice.setChoice_2(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE_2)));
-        choice.setChoice_3(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE_3)));
+        choice.setDescription(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_DESCR)));
+        choice.setChoice1(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE1)));
+        choice.setChoice2(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE2)));
+        choice.setChoice3(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE3)));
 
 
         return choice;
@@ -85,9 +87,10 @@ public class ChoiceDataSource {
             do{
                 Choice choice = new Choice();
                 choice.setId(cursor.getInt(cursor.getColumnIndex(ChoiceEntry.KEY_ID)));
-                choice.setChoice_1(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE_1)));
-                choice.setChoice_2(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE_2)));
-                choice.setChoice_3(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE_3)));
+                choice.setDescription(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_DESCR)));
+                choice.setChoice1(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE1)));
+                choice.setChoice2(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE2)));
+                choice.setChoice3(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE3)));
 
                 choices.add(choice);
             } while(cursor.moveToNext());
@@ -109,9 +112,10 @@ public class ChoiceDataSource {
             do{
                 Choice choice = new Choice();
                 choice.setId(cursor.getInt(cursor.getColumnIndex(ChoiceEntry.KEY_ID)));
-                choice.setChoice_1(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE_1)));
-                choice.setChoice_2(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE_2)));
-                choice.setChoice_3(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE_3)));
+                choice.setDescription(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_DESCR)));
+                choice.setChoice1(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE1)));
+                choice.setChoice2(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE2)));
+                choice.setChoice3(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE3)));
 
                 choices.add(choice);
             } while(cursor.moveToNext());
@@ -125,9 +129,10 @@ public class ChoiceDataSource {
      */
     public int updateChoice(Choice choice){
         ContentValues values = new ContentValues();
-        values.put(ChoiceEntry.KEY_CHOICE_1, choice.getChoice_1());
-        values.put(ChoiceEntry.KEY_CHOICE_2, choice.getChoice_2());
-        values.put(ChoiceEntry.KEY_CHOICE_3, choice.getChoice_3());
+        values.put(ChoiceEntry.KEY_DESCR,choice.getDescription());
+        values.put(ChoiceEntry.KEY_CHOICE1, choice.getChoice1());
+        values.put(ChoiceEntry.KEY_CHOICE2, choice.getChoice2());
+        values.put(ChoiceEntry.KEY_CHOICE3, choice.getChoice3());
 
         return this.db.update(ChoiceEntry.TABLE_CHOICE, values, ChoiceEntry.KEY_ID + " = ?",
                 new String[] { String.valueOf(choice.getId()) });

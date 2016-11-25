@@ -120,7 +120,7 @@ public class UserDataSource {
          }
 
         //delete the user
-        this.db.delete(UserEntry.CREATE_TABLE_TABLE_USER, UserEntry.KEY_ID + " = ?",
+        this.db.delete(UserEntry.CREATE_TABLE_USER, UserEntry.KEY_ID + " = ?",
                 new String[] { String.valueOf(id) });
 
     }

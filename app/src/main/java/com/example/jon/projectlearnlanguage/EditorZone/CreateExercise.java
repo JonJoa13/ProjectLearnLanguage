@@ -32,6 +32,8 @@ public class CreateExercise extends AppCompatActivity {
     public void onClickCreateExercise(View w){
         Intent intent = new Intent(CreateExercise.this, ExerciseView.class);
         startActivity(intent);
+
+        createExercise();
     }
 
     public void createExercise(){

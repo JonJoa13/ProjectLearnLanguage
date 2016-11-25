@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:id="@+id/Vocabulaire"
-        android:layout_below="@+id/btn_backToUserViewFromCreateUser"
+        android:layout_below="@+id/btn_backToChoiceViewFromCreateChoice"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true">
 
@@ -174,7 +174,7 @@
     <Button
         android:text="@string/btn_back"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_backToUserViewFromCreateUser"
+        android:id="@+id/btn_backToChoiceViewFromCreateChoice"
         android:layout_width="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"

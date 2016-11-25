@@ -23,6 +23,7 @@
     <string name="action_settings">Parametres</string>
 
     <!-- activity_choice_view -->
+    <string name="description">Description</string>
     <string name="cv_choice1">Choix 1</string>
     <string name="cv_choice2">Choix 2</string>
     <string name="cv_choice3">Choix 3</string>

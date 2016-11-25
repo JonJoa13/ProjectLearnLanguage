@@ -34,6 +34,8 @@ public class CreateCours extends AppCompatActivity {
     public void onClickCreateCours(View w){
         Intent intent = new Intent(CreateCours.this, CoursView.class);
         startActivity(intent);
+
+        createCours();
     }
 
     public void createCours(){

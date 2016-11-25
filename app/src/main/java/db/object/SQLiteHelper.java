@@ -46,7 +46,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CoursEntry.CREATE_TABLE_COURS);
         db.execSQL(ExerciseEntry.CREATE_TABLE_EXERCISE);
-        db.execSQL(UserEntry.CREATE_TABLE_TABLE_USER);
+        db.execSQL(UserEntry.CREATE_TABLE_USER);
         db.execSQL(ChoiceEntry.CREATE_TABLE_CHOICE);
         db.execSQL(ExerciseChoiceEntry.CREATE_TABLE_EXERCISE_CHOICE);
         db.execSQL(CoursUserEntry.CREATE_TABLE_COURS_USER);

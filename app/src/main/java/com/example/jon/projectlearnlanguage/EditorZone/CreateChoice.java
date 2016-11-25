@@ -30,28 +30,32 @@ public class CreateChoice extends AppCompatActivity {
         SQLiteHelper mDbHelper = new SQLiteHelper(this);
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
-        EditText editTextChoice1,
+        EditText editTextDescription,
+                 editTextChoice1,
                  editTextChoice2,
                  editTextChoice3;
 
+        editTextDescription = (EditText) findViewById(R.id.et_description);
         editTextChoice1 = (EditText) findViewById(R.id.et_choice1);
         editTextChoice2 = (EditText) findViewById(R.id.et_choice2);
         editTextChoice3 = (EditText) findViewById(R.id.et_choice3);
 
+        String description = editTextDescription.getText().toString();
         String choice1 = editTextChoice1.getText().toString();
-        String choice2 = editTextChoice1.getText().toString();
-        String choice3 = editTextChoice1.getText().toString();
+        String choice2 = editTextChoice2.getText().toString();
+        String choice3 = editTextChoice3.getText().toString();
 
         ContentValues values = new ContentValues();
-        values.put(ReaderContract.ChoiceEntry.KEY_CHOICE_1, choice1);
-        values.put(ReaderContract.ChoiceEntry.KEY_CHOICE_2, choice2);
-        values.put(ReaderContract.ChoiceEntry.KEY_CHOICE_3, choice3);
+        values.put(ReaderContract.ChoiceEntry.KEY_DESCR, description);
+        values.put(ReaderContract.ChoiceEntry.KEY_CHOICE1, choice1);
+        values.put(ReaderContract.ChoiceEntry.KEY_CHOICE2, choice2);
+        values.put(ReaderContract.ChoiceEntry.KEY_CHOICE3, choice3);
 
         db.insert(ReaderContract.ChoiceEntry.TABLE_CHOICE, ReaderContract.ChoiceEntry.KEY_NULLABLE, values);
 
         db.close();
 
-        Intent intent = new Intent (CreateChoice.this,UserView.class);
+        Intent intent = new Intent (CreateChoice.this,ChoiceView.class);
         startActivity(intent);
 
     }

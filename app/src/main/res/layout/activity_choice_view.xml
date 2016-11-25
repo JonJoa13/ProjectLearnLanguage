@@ -15,7 +15,7 @@
     <Button
         android:text="@string/btn_back"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_backToUserViewFromCreateUser"
+        android:id="@+id/btn_backToChoiceViewFromCreateChoice"
         android:layout_width="wrap_content"
         android:onClick="onClickBackToSelectAction"/>
 
@@ -51,14 +51,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_AddNewChoice"
-            android:onClick="onClickGoToAddNewCours"/>
+            android:onClick="onClickGoToAddNewChoice"/>
 
         <Button
             android:text="@string/ez_modify"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_goToModifyChoice"
-            android:onClick="onClickGoToModifyDeleteCours"/>
+            android:onClick=""/>
 
     </LinearLayout>
 
