@@ -10,8 +10,6 @@ import db.object.ReaderContract.UserEntry;
 import db.object.ReaderContract.ExerciseChoiceEntry;
 import db.object.ReaderContract.CoursUserEntry;
 
-import db.object.ReaderContract;
-import android.support.annotation.RequiresPermission;
 
 /**
  * Created by TheoP on 18.11.2016.

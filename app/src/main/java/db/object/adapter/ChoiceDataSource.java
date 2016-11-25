@@ -11,7 +11,6 @@ import java.util.List;
 import db.object.ReaderContract.ChoiceEntry;
 import db.object.ReaderContract.ExerciseEntry;
 import db.object.ReaderContract.ExerciseChoiceEntry;
-import db.object.ReaderContract;
 import db.object.SQLiteHelper;
 import db.object.object.Choice;
 

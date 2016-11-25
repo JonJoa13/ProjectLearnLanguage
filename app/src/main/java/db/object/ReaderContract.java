@@ -87,13 +87,17 @@ public final class ReaderContract {
 
         //Choice Column names
         public static final String KEY_ID = "id";
-        public static final String KEY_DESCRIPTION = "description";
+        public static final String KEY_CHOICE_1 = "choice1";
+        public static final String KEY_CHOICE_2 = "choice2";
+        public static final String KEY_CHOICE_3 = "choice3";
 
         //Table choice create statement
         public static final String CREATE_TABLE_CHOICE = "CREATE TABLE "
                 + ChoiceEntry.TABLE_CHOICE + " ("
                 + ChoiceEntry.KEY_ID + " INTEGER PRIMARY KEY,"
-                + ChoiceEntry.KEY_DESCRIPTION + " TEXT "
+                + ChoiceEntry.KEY_CHOICE_1 + " TEXT "
+                + ChoiceEntry.KEY_CHOICE_2 + " TEXT "
+                + ChoiceEntry.KEY_CHOICE_3 + " TEXT "
                 + " )";
     }
 
