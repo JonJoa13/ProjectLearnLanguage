@@ -59,6 +59,7 @@ public class CreateUser extends AppCompatActivity {
         String email = editTextEmail.getText().toString();
         String mdp = editTextMDP.getText().toString();
 
+
         ContentValues values = new ContentValues();
         values.put(ReaderContract.UserEntry.KEY_NAME, name);
         values.put(ReaderContract.UserEntry.KEY_FIRSTNAME,firstname);
