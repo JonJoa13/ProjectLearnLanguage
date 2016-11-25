@@ -16,6 +16,7 @@
     <string-array name="nav_item_activity_titles">
         <item>Accueil</item>
         <item>Cours</item>
+        <item>Cours</item>
         <item>Parametres</item>
     </string-array>
 
@@ -23,7 +24,9 @@
 
 
     <!-- activity_choice_view -->
-    <string name="cv_description">Description</string>
+    <string name="cv_choice1">Choix 1</string>
+    <string name="cv_choice2">Choix 2</string>
+    <string name="cv_choice3">Choix 3</string>
     <string name="AddChoice">Ajouter choix</string>
 
     <!-- activity_..._view -->
@@ -36,6 +39,7 @@
     <string name="GoToUser">Utilisateurs</string>
     <string name="GotoCours">Cours</string>
     <string name="GoToExercise">Exercices</string>
+    <string name="GoToChoice">Choix</string>
 
     <!-- activity_welcome_page -->
     <string name="EditorMode">Mode editeur</string>

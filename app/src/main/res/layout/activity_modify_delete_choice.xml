@@ -35,10 +35,10 @@
             android:layout_marginTop="20dp" />
 
         <TextView
-            android:text="@string/cv_description"
+            android:text="@string/cv_choice1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_cours"
+            android:id="@+id/tv_choice1"
             android:textSize="18sp"
             android:layout_marginTop="50dp" />
 
@@ -46,9 +46,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="@string/cv_description"
             android:ems="10"
-            android:id="@+id/et_cours"
+            android:id="@+id/et_choice1"
+            android:background="?attr/colorButtonNormal"
+            android:minHeight="30dp" />
+
+        <TextView
+            android:text="@string/cv_choice2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_choice2"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/et_choice2"
+            android:background="?attr/colorButtonNormal"
+            android:minHeight="30dp" />
+
+        <TextView
+            android:text="@string/cv_choice3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_choice3"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/et_choice3"
             android:background="?attr/colorButtonNormal"
             android:minHeight="30dp" />
 

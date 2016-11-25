@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_create_user"
+    android:id="@+id/activity_create_choice"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -9,20 +9,21 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jon.projectlearnlanguage.EditorZone.CreateUser"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <Button
         android:text="@string/btn_back"
         android:layout_height="wrap_content"
         android:id="@+id/btn_backToSelectActionFromCW"
         android:layout_width="wrap_content"
-        android:onClick="onClickBackToUserView" />
+        android:onClick="onClickBackToCoursView"/>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp">
+        android:layout_weight="0.81">
 
         <TextView
             android:text="@string/tv_titel"
@@ -34,71 +35,56 @@
             android:layout_marginTop="20dp" />
 
         <TextView
-            android:text="@string/tv_nom"
+            android:text="@string/cv_choice1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_name"
+            android:id="@+id/tv_choice1"
             android:textSize="18sp"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="50dp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/et_name"
+            android:id="@+id/et_choice1"
             android:background="?attr/colorButtonNormal"
             android:minHeight="30dp" />
 
         <TextView
-            android:text="@string/tv_prenom"
+            android:text="@string/cv_choice2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_firstname"
+            android:id="@+id/tv_choice2"
             android:textSize="18sp"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="10dp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/et_firstname"
+            android:id="@+id/et_choice2"
             android:background="?attr/colorButtonNormal"
             android:minHeight="30dp" />
 
         <TextView
-            android:text="@string/tv_email"
+            android:text="@string/cv_choice3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_email"
+            android:id="@+id/tv_choice3"
             android:textSize="18sp"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="10dp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
+            android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/et_email"
+            android:id="@+id/et_choice3"
             android:background="?attr/colorButtonNormal"
             android:minHeight="30dp" />
 
-        <TextView
-            android:text="@string/tv_mdp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_mdp"
-            android:textSize="18sp"
-            android:layout_marginTop="5dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/et_mdp"
-            android:background="?attr/colorButtonNormal"
-            android:minHeight="30dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -110,8 +96,7 @@
             android:text="@string/ez_create"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_createUser"
-            android:onClick="onClickCreateUser" />
+            android:id="@+id/btn_createUser" />
 
     </LinearLayout>
 

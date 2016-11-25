@@ -44,7 +44,8 @@
         <activity android:name=".EditorZone.ExerciseView" />
         <activity android:name=".EditorZone.ChoiceView" />
         <activity android:name=".EditorZone.ModifyDeleteChoice" />
-        <activity android:name=".EditorZone.AddChoiceToExercise"></activity>
+        <activity android:name=".EditorZone.AddChoiceToExercise" />
+        <activity android:name=".EditorZone.CreateChoice"></activity>
     </application>
 
 </manifest>

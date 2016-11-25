@@ -23,7 +23,9 @@
     <string name="action_settings">Settings</string>
 
     <!-- activity_choice_view -->
-    <string name="cv_description">Description</string>
+    <string name="cv_choice1">Choice 1</string>
+    <string name="cv_choice2">Choice 2</string>
+    <string name="cv_choice3">Choice 3</string>
     <string name="AddChoice">Add choice</string>
 
     <!-- activity_..._view -->
@@ -36,6 +38,7 @@
     <string name="GoToUser">Users</string>
     <string name="GotoCours">Cours</string>
     <string name="GoToExercise">Exercises</string>
+    <string name="GoToChoice">Choices</string>
 
     <!-- activity_welcome_page -->
     <string name="EditorMode">Editor mode</string>

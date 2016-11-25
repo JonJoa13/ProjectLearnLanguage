@@ -4,9 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
-public class ChangePWD extends AppCompatActivity {
-
+public class ChangePWD extends AppCompatActivity implements View.OnClickListener {
+    public EditText editText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,6 +15,10 @@ public class ChangePWD extends AppCompatActivity {
         Intent intent = getIntent();
 
         setContentView(R.layout.activity_change_pwd);
+
+        editText = (EditText)findViewById(R.id.et_mdpactuel);
+
+        editText.setOnClickListener(this);
     }
 
     public void onClickModifyMDP(View w){
@@ -26,4 +31,8 @@ public class ChangePWD extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(View v) {
+        editText.setText("");
+    }
 }
