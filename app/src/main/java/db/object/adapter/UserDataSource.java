@@ -107,7 +107,7 @@ public class UserDataSource {
         values.put(UserEntry.KEY_MDP, user.getMdp());
 
         return this.db.update(UserEntry.TABLE_USER, values, UserEntry.KEY_ID + " = ?",
-                new String[] { String.valueOf(user.getId()) });
+                new String[] { String.valueOf(user.getId())});
     }
 
     /**

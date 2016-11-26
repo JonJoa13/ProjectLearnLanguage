@@ -31,17 +31,17 @@ public class CreateExercise extends AppCompatActivity {
 
     public void onClickCreateExercise(View w){
 
-        EditText editTextTitleEx,
+        EditText editTextTitle,
                 editTextType,
                 editTextContent,
                 editTextSolution;
 
-        editTextTitleEx = (EditText)findViewById(R.id.et_titelEx);
+        editTextTitle = (EditText)findViewById(R.id.et_titelEx);
         editTextType = (EditText)findViewById(R.id.et_type);
         editTextContent = (EditText)findViewById(R.id.et_content);
         editTextSolution = (EditText)findViewById(R.id.et_solution);
 
-        String titre = editTextTitleEx.getText().toString();
+        String titre = editTextTitle.getText().toString();
         String type = editTextType.getText().toString();
         String content = editTextContent.getText().toString();
         String solution = editTextSolution.getText().toString();

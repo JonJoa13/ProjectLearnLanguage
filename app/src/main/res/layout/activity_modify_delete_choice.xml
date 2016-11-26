@@ -114,14 +114,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_modifyCours"
-            android:onClick="onClickModifyCours" />
+            android:onClick="onClickModifyChoice" />
 
         <Button
             android:text="@string/ez_delete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_deleteCours"
-            android:onClick="onClickDeleteCours"/>
+            android:onClick="onClickDeleteChoice"/>
 
     </LinearLayout>
 

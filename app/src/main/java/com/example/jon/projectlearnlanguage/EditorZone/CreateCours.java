@@ -34,7 +34,7 @@ public class CreateCours extends AppCompatActivity {
     public void onClickCreateCours(View w){
 
         EditText editTextCours,
-                editTextLevel;
+                 editTextLevel;
 
         editTextCours = (EditText)findViewById(R.id.et_cours);
         editTextLevel = (EditText)findViewById(R.id.et_level);
