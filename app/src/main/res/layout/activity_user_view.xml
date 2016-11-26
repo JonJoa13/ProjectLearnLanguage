@@ -23,8 +23,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="312dp"
-        android:layout_weight="0.38">
+        android:layout_height="355dp"
+        android:layout_weight="1.08">
 
         <TextView
             android:text="@string/tv_titel"
@@ -53,13 +53,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_AddNewUser"
             android:onClick="onClickGoToAddNewUser"/>
-
-        <Button
-            android:text="@string/ez_modify"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_goToModifyUser"
-            android:onClick="onClickGoToModifyDeleteUser"/>
 
     </LinearLayout>
 

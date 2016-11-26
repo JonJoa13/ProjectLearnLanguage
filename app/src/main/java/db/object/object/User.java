@@ -11,6 +11,23 @@ public class User {
     private String email;
     private String mdp;
 
+    public User(){}
+
+    public User(String name, String firstname, String email, String mdp){
+        this.name=name;
+        this.firstname=firstname;
+        this.email=email;
+        this.mdp=mdp;
+    }
+
+    public User(int id, String name, String firstname, String email, String mdp ){
+        this.id = id;
+        this.name = name;
+        this.firstname = firstname;
+        this.email = email;
+        this.mdp = mdp;
+    }
+
     public int getId() {
         return id;
     }

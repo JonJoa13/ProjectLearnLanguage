@@ -31,16 +31,18 @@ public class ChoiceView extends AppCompatActivity {
         readSQL();
     }
 
+    //onClick to go back to the SelectAction Layout
     public void onClickBackToSelectAction(View w) {
         Intent intent = new Intent(ChoiceView.this, SelectAction.class);
         startActivity(intent);
     }
-
+    //onClick to go to the layout that allow to add new choices
     public void onClickGoToAddNewChoice(View w) {
         Intent intent = new Intent(ChoiceView.this, CreateChoice.class);
         startActivity(intent);
     }
 
+    //Load the data from the table choice
     public void readSQL() {
         SQLiteHelper mDbHelper = new SQLiteHelper(this);
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
@@ -66,6 +68,7 @@ public class ChoiceView extends AppCompatActivity {
         generateChoiceList(array);
     }
 
+    //Show the data in the list view, with the description
     public void generateChoiceList(ArrayList<String> array) {
 
         Collections.sort(array);

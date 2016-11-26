@@ -14,6 +14,8 @@ import com.example.jon.projectlearnlanguage.R;
 
 import db.object.ReaderContract;
 import db.object.SQLiteHelper;
+import db.object.adapter.UserDataSource;
+import db.object.object.User;
 
 public class CreateUser extends AppCompatActivity {
 
@@ -26,13 +28,13 @@ public class CreateUser extends AppCompatActivity {
         setContentView(R.layout.activity_create_user);
 
     }
-
+    //onClick go back to the UserView layout
     public void onClickBackToUserView(View v){
         Intent intent = new Intent(CreateUser.this, UserView.class);
         startActivity(intent);
     }
 
-
+    //onClick create a new user in the database
     public void onClickCreateUser(View v){
         SQLiteHelper mDbHelper = new SQLiteHelper(this);
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
@@ -52,16 +54,9 @@ public class CreateUser extends AppCompatActivity {
         String email = editTextEmail.getText().toString();
         String mdp = editTextMDP.getText().toString();
 
+        UserDataSource uds = new UserDataSource(getApplicationContext());
 
-        ContentValues values = new ContentValues();
-        values.put(ReaderContract.UserEntry.KEY_NAME, name);
-        values.put(ReaderContract.UserEntry.KEY_FIRSTNAME,firstname);
-        values.put(ReaderContract.UserEntry.KEY_EMAIL, email);
-        values.put(ReaderContract.UserEntry.KEY_MDP, mdp);
-
-        db.insert(ReaderContract.UserEntry.TABLE_USER, ReaderContract.UserEntry.KEY_NULLABLE,values);
-
-        db.close();
+        uds.createUser(new User(name,firstname,email,mdp));
 
         Intent intent = new Intent(CreateUser.this, UserView.class);
         startActivity(intent);

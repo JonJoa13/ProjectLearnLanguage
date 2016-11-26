@@ -47,7 +47,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="@string/ce_title"
             android:ems="10"
             android:id="@+id/et_titleEx"
             android:background="?attr/colorButtonNormal"
@@ -65,7 +64,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="@string/ce_type"
             android:ems="10"
             android:id="@+id/et_type"
             android:background="?attr/colorButtonNormal"
@@ -85,7 +83,6 @@
             android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/et_content"
-            android:text="@string/ce_content"
             android:background="?attr/colorButtonNormal"
             android:minHeight="30dp" />
 
@@ -103,7 +100,6 @@
             android:ems="10"
             android:id="@+id/et_solution"
             android:inputType="text"
-            android:text="@string/ce_solution"
             android:background="?attr/colorButtonNormal"
             android:minHeight="30dp" />
     </LinearLayout>

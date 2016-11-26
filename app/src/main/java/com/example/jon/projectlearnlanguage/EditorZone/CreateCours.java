@@ -26,6 +26,7 @@ public class CreateCours extends AppCompatActivity {
         setContentView(R.layout.activity_create_cours);
     }
 
+    //onClick go back to the CoursView layout
     public void onClickBackToCoursView(View w){
         Intent intent = new Intent(CreateCours.this, CoursView.class);
         startActivity(intent);
@@ -37,7 +38,7 @@ public class CreateCours extends AppCompatActivity {
 
         createCours();
     }
-
+    //onClick create a new cours in the database
     public void createCours(){
         SQLiteHelper mDbHelper = new SQLiteHelper(this);
         SQLiteDatabase db = mDbHelper.getWritableDatabase();

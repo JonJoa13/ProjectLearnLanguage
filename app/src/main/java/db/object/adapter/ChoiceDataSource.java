@@ -42,6 +42,8 @@ public class ChoiceDataSource {
 
         id = this.db.insert(ChoiceEntry.TABLE_CHOICE, null, values);
 
+        db.close();
+
         return id;
     }
 

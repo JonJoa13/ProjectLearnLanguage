@@ -23,11 +23,12 @@ public class CreateExercise extends AppCompatActivity {
 
         setContentView(R.layout.activity_create_exercise);
     }
-
+    //onClick go back to the ExerciseView layout
     public void onClickBackToExerciseView(View w){
         Intent intent = new Intent(CreateExercise.this, ExerciseView.class);
         startActivity(intent);
     }
+
 
     public void onClickCreateExercise(View w){
         Intent intent = new Intent(CreateExercise.this, ExerciseView.class);
@@ -36,6 +37,7 @@ public class CreateExercise extends AppCompatActivity {
         createExercise();
     }
 
+    //onClick create a new exercise in the database
     public void createExercise(){
         SQLiteHelper mDbHelper = new SQLiteHelper(this);
         SQLiteDatabase db = mDbHelper.getWritableDatabase();

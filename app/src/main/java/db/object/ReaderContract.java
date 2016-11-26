@@ -29,7 +29,7 @@ public final class ReaderContract {
         //Table Cours create statement
         public static final String CREATE_TABLE_COURS = "CREATE TABLE "
                 + CoursEntry.TABLE_COURS + " ("
-                + CoursEntry.KEY_ID + " INTEGER PRIMARY KEY,"
+                + CoursEntry.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + CoursEntry.KEY_TITRE + " TEXT, "
                 + CoursEntry.KEY_LEVEL + " INTEGER, "
                 + CoursEntry.KEY_NULLABLE + "TEXT"
@@ -52,7 +52,7 @@ public final class ReaderContract {
         //Table Exercise create statement
         public static final String CREATE_TABLE_EXERCISE = "CREATE TABLE "
                 + ExerciseEntry.TABLE_EXERCISE + " ("
-                + ExerciseEntry.KEY_ID + " INTEGER PRIMARY KEY,"
+                + ExerciseEntry.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + ExerciseEntry.KEY_TITRE + " TEXT, "
                 + ExerciseEntry.KEY_TYPE + " TEXT, "
                 + ExerciseEntry.KEY_IDCOURS + " INTEGER, "
@@ -77,7 +77,7 @@ public final class ReaderContract {
         //Table User create statement
         public static final String CREATE_TABLE_USER = "CREATE TABLE "
                 + UserEntry.TABLE_USER + " ("
-                + UserEntry.KEY_ID + " INTEGER PRIMARY KEY,"
+                + UserEntry.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + UserEntry.KEY_NAME + " TEXT, "
                 + UserEntry.KEY_FIRSTNAME + " TEXT, "
                 + UserEntry.KEY_EMAIL + " TEXT, "
@@ -102,7 +102,7 @@ public final class ReaderContract {
         //Table choice create statement
         public static final String CREATE_TABLE_CHOICE = "CREATE TABLE "
                 + ChoiceEntry.TABLE_CHOICE + "("
-                + ChoiceEntry.KEY_ID + " INTEGER PRIMARY KEY,"
+                + ChoiceEntry.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + ChoiceEntry.KEY_DESCR + " TEXT, "
                 + ChoiceEntry.KEY_CHOICE1 + " TEXT, "
                 + ChoiceEntry.KEY_CHOICE2 + " TEXT, "
@@ -125,10 +125,10 @@ public final class ReaderContract {
         //Table cours_user create statement
         public static final String CREATE_TABLE_COURS_USER = "CREATE TABLE "
                 + CoursUserEntry.TABLE_COURS_USER + " ("
-                + CoursUserEntry.KEY_ID + " INTEGER PRIMARY KEY,"
+                + CoursUserEntry.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + CoursUserEntry.KEY_COURS_ID + " INTEGER, "
                 + CoursUserEntry.KEY_USER_ID + " INTEGER, "
-                + CoursUserEntry.KEY_NULLABLE + "TEXT,"
+                + CoursUserEntry.KEY_NULLABLE + " TEXT,"
                 + "FOREIGN KEY (" + KEY_COURS_ID + ") REFERENCES " + CoursEntry.TABLE_COURS + " (" + KEY_ID + "), "
                 + "FOREIGN KEY (" + KEY_USER_ID + ") REFERENCES " + UserEntry.TABLE_USER + " (" + KEY_ID +")"
                 + " )";
@@ -147,7 +147,7 @@ public final class ReaderContract {
         //Table exercice_choice create statement
         public static final String CREATE_TABLE_EXERCISE_CHOICE = "CREATE TABLE "
                 + ExerciseChoiceEntry.TABLE_EXERCISE_CHOICE + "("
-                + ExerciseChoiceEntry.KEY_ID + " INTEGER PRIMARY KEY,"
+                + ExerciseChoiceEntry.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + ExerciseChoiceEntry.KEY_EXERCISE_ID + " INTEGER, "
                 + ExerciseChoiceEntry.KEY_CHOICE_ID + " INTEGER, "
                 + ExerciseChoiceEntry.KEY_NULLABLE + "TEXT,"

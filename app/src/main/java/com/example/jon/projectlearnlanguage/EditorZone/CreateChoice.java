@@ -12,6 +12,8 @@ import com.example.jon.projectlearnlanguage.R;
 
 import db.object.ReaderContract;
 import db.object.SQLiteHelper;
+import db.object.adapter.ChoiceDataSource;
+import db.object.object.Choice;
 
 public class CreateChoice extends AppCompatActivity {
 
@@ -22,10 +24,12 @@ public class CreateChoice extends AppCompatActivity {
         setContentView(R.layout.activity_create_choice);
     }
 
+    //onClick go back to the ChoiceView layout
     public void onClickBackToChoiceView(View v){
         Intent intent = new Intent(CreateChoice.this,ChoiceView.class);
     }
 
+    //onClick create a new choice in the database
     public void onClickCreateChoice(View v){
         SQLiteHelper mDbHelper = new SQLiteHelper(this);
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
@@ -45,19 +49,18 @@ public class CreateChoice extends AppCompatActivity {
         String choice2 = editTextChoice2.getText().toString();
         String choice3 = editTextChoice3.getText().toString();
 
-        ContentValues values = new ContentValues();
-        values.put(ReaderContract.ChoiceEntry.KEY_DESCR, description);
-        values.put(ReaderContract.ChoiceEntry.KEY_CHOICE1, choice1);
-        values.put(ReaderContract.ChoiceEntry.KEY_CHOICE2, choice2);
-        values.put(ReaderContract.ChoiceEntry.KEY_CHOICE3, choice3);
+        Choice choice = new Choice();
+        choice.setDescription(description);
+        choice.setChoice1(choice1);
+        choice.setChoice2(choice2);
+        choice.setChoice3(choice3);
 
-        db.insert(ReaderContract.ChoiceEntry.TABLE_CHOICE, ReaderContract.ChoiceEntry.KEY_NULLABLE, values);
+        ChoiceDataSource cds = new ChoiceDataSource(getApplicationContext()) ;
 
-        db.close();
+        cds.createChoice(choice);
 
         Intent intent = new Intent (CreateChoice.this,ChoiceView.class);
         startActivity(intent);
-
     }
 
 }

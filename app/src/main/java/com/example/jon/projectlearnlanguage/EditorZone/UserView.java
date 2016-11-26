@@ -1,5 +1,6 @@
 package com.example.jon.projectlearnlanguage.EditorZone;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -10,87 +11,69 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 
 import com.example.jon.projectlearnlanguage.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 import db.object.ReaderContract;
 import db.object.SQLiteHelper;
+import db.object.adapter.UserAdapter;
+import db.object.adapter.UserDataSource;
+import db.object.object.User;
 
 public class UserView extends AppCompatActivity {
     private ListView userList;
+    Context context;
+    List<User> users;
+    User user;
+    SQLiteHelper helper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Intent intent = getIntent();
-
         setContentView(R.layout.activity_user_view);
+        context = this;
 
-        readSQL();
+
+        final UserDataSource uds = new UserDataSource(this);
+        helper.getInstance(context);
+
+        userList = (ListView) findViewById(R.id.Users_List);
+
+        users = new ArrayList<User>();
+
+        users = uds.getAllUsers();
+
+        UserAdapter adapter = new UserAdapter(context,users);
+        userList.setAdapter(adapter);
+
+        userList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                user = (User) parent.getItemAtPosition(position);
+                int userSelectedID = user.getId();
+                Intent intent = new Intent(UserView.this,ModifyDeleteUser.class);
+                intent.putExtra("idUser",userSelectedID);
+                startActivity(intent);
+            }
+        });
 
     }
 
+    //onClick to go back to the SelectAction Layout
     public void onClickBackToSelectAction(View w) {
         Intent intent = new Intent(UserView.this, SelectAction.class);
         startActivity(intent);
     }
 
+    //onClick to go to the layout that allow to add a new user
     public void onClickGoToAddNewUser(View w) {
         Intent intent = new Intent(UserView.this, CreateUser.class);
         startActivity(intent);
-    }
-
-    public void onClickGoToModifyDeleteUser(View w) {
-        Intent intent = new Intent(UserView.this, ModifyDeleteUser.class);
-        startActivity(intent);
-    }
-
-    public void readSQL() {
-        SQLiteHelper mDbHelper = new SQLiteHelper(this);
-        SQLiteDatabase db = mDbHelper.getReadableDatabase();
-
-        String[] userListNameFirstName = new String[]{
-                ReaderContract.UserEntry.KEY_FIRSTNAME,
-                ReaderContract.UserEntry.KEY_NAME
-                };
-
-        Cursor cursor = db.query(false, ReaderContract.UserEntry.TABLE_USER, userListNameFirstName,null, null, null, null, null, null);
-        ArrayList<String> array = new ArrayList<String>();
-
-        cursor.moveToFirst();
-
-        while (!cursor.isAfterLast()) {
-            array.add(cursor.getString(1));
-            cursor.moveToNext();
-        }
-
-        db.close();
-        generateUserList(array);
-    }
-
-    public void generateUserList(ArrayList<String> array) {
-
-        Collections.sort(array);
-
-        userList = (ListView) findViewById(R.id.Users_List);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.simple_list_view, R.id.tv_list, array);
-
-        userList.setAdapter(adapter);
-
-    }
-
-    public class SelectUserAction implements AdapterView.OnItemClickListener {
-
-
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
-        }
     }
 }

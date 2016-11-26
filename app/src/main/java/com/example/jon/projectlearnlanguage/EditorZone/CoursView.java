@@ -32,21 +32,18 @@ public class CoursView extends AppCompatActivity {
         readSQL();
     }
 
+    //onClick to go back to the SelectAction Layout
     public void onClickBackToSelectAction(View w){
         Intent intent = new Intent(CoursView.this,SelectAction.class);
         startActivity(intent);
     }
 
+    //onClick to go to the layout that allow to add a new cours
     public void onClickGoToAddNewCours(View w){
         Intent intent = new Intent(CoursView.this,CreateCours.class);
         startActivity(intent);
     }
-
-    public void onClickGoToModifyDeleteCours(View w){
-        Intent intent = new Intent(CoursView.this,ModifyDeleteCours.class);
-        startActivity(intent);
-    }
-
+    //Load the data from the table cours
     public void readSQL() {
         SQLiteHelper mDbHelper = new SQLiteHelper(this);
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
@@ -70,6 +67,7 @@ public class CoursView extends AppCompatActivity {
         generateUserList(array);
     }
 
+    //Show the data in the list view, with the description
     public void generateUserList(ArrayList<String> array) {
 
         Collections.sort(array);

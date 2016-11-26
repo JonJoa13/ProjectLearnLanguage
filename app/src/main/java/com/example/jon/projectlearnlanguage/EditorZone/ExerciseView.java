@@ -31,21 +31,19 @@ public class ExerciseView extends AppCompatActivity {
         readSQL();
     }
 
+    //onClick to go back to the SelectAction Layout
     public void onClickBackToSelectAction(View w){
         Intent intent = new Intent(ExerciseView.this,SelectAction.class);
         startActivity(intent);
     }
 
+    //onClick to go to the layout that allow to add a new exercise
     public void onClickGoToAddNewEx(View w){
         Intent intent = new Intent(ExerciseView.this,CreateExercise.class);
         startActivity(intent);
     }
 
-    public void onClickGoToModifyDeleteEx(View w){
-        Intent intent = new Intent(ExerciseView.this,ModifyDeleteExercise.class);
-        startActivity(intent);
-    }
-
+    //Load the data from the table exercise
     public void readSQL() {
         SQLiteHelper mDbHelper = new SQLiteHelper(this);
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
@@ -69,6 +67,7 @@ public class ExerciseView extends AppCompatActivity {
         generateChoiceList(array);
     }
 
+    //Show the data in the list view, with the description
     public void generateChoiceList(ArrayList<String> array) {
 
         Collections.sort(array);

@@ -53,13 +53,6 @@
             android:id="@+id/btn_AddNewChoice"
             android:onClick="onClickGoToAddNewChoice"/>
 
-        <Button
-            android:text="@string/ez_modify"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_goToModifyChoice"
-            android:onClick=""/>
-
     </LinearLayout>
 
 </LinearLayout>

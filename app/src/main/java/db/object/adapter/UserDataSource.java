@@ -18,12 +18,12 @@ import db.object.object.User;
  */
 
 public class UserDataSource {
+    private SQLiteHelper helper;
     private SQLiteDatabase db;
     private Context context;
 
     public UserDataSource(Context context){
-        SQLiteHelper sqliteHelper = SQLiteHelper.getInstance(context);
-        db = sqliteHelper.getWritableDatabase();
+        helper = SQLiteHelper.getInstance(context);
         this.context = context;
     }
 
@@ -32,6 +32,7 @@ public class UserDataSource {
      */
     public long createUser(User user){
         long id;
+        db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(UserEntry.KEY_NAME, user.getName());
         values.put(UserEntry.KEY_FIRSTNAME, user.getFirstname());
@@ -47,6 +48,7 @@ public class UserDataSource {
      * Find one choice by Id
      */
     public User getUserById(long id){
+        db = helper.getWritableDatabase();
         String sql = "SELECT * FROM " + UserEntry.TABLE_USER +
                 " WHERE " + UserEntry.KEY_ID + " = " + id;
 
@@ -69,7 +71,8 @@ public class UserDataSource {
     /**
      * Get all User
      */
-    public List<User> getAllCours(){
+    public List<User> getAllUsers(){
+        db = helper.getReadableDatabase();
         List<User> users = new ArrayList<User>();
         String sql = "SELECT * FROM " + UserEntry.TABLE_USER + " ORDER BY " + UserEntry.KEY_NAME;
 
@@ -81,7 +84,7 @@ public class UserDataSource {
                 User user = new User();
                 user.setId(cursor.getInt(cursor.getColumnIndex(UserEntry.KEY_ID)));
                 user.setName(cursor.getString(cursor.getColumnIndex(UserEntry.KEY_NAME)));
-                user.setEmail(cursor.getString(cursor.getColumnIndex(UserEntry.KEY_FIRSTNAME)));
+                user.setFirstname(cursor.getString(cursor.getColumnIndex(UserEntry.KEY_FIRSTNAME)));
                 user.setEmail(cursor.getString(cursor.getColumnIndex(UserEntry.KEY_EMAIL)));
                 user.setMdp(cursor.getString(cursor.getColumnIndex(UserEntry.KEY_MDP)));
 
@@ -96,6 +99,7 @@ public class UserDataSource {
      *  Update a User
      */
     public int updateUser(User user){
+        db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(UserEntry.KEY_NAME, user.getName());
         values.put(UserEntry.KEY_FIRSTNAME, user.getFirstname());
@@ -110,7 +114,7 @@ public class UserDataSource {
      * Delete a User - this will also delete all exercises
      */
     public void deleteUser(long id){
-
+        db = helper.getWritableDatabase();
         ExerciceDataSource pra = new ExerciceDataSource(context);
         //get all exercises of the user
         List<Exercise> exercises = pra.getAllExercisesByUser(id);
