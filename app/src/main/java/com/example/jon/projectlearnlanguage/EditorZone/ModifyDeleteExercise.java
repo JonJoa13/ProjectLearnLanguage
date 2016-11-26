@@ -1,10 +1,13 @@
 package com.example.jon.projectlearnlanguage.EditorZone;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.jon.projectlearnlanguage.R;
 
@@ -74,7 +77,42 @@ public class ModifyDeleteExercise extends AppCompatActivity {
     }
 
     public void onClickDeleteEx(View w){
-        Intent intent = new Intent(ModifyDeleteExercise.this,ExerciseView.class);
-        startActivity(intent);
+        AlertDialog.Builder alert = new AlertDialog.Builder (this);
+        // Setting Dialog Title
+        alert.setTitle(R.string.da_titel);
+
+        // Setting Dialog Message
+        alert.setMessage(R.string.da_message);
+
+        // Setting Icon to Dialog
+        alert.setIcon(R.drawable.ic_delete_forever);
+
+        // Setting Positive "Yes" Button
+        alert.setPositiveButton(R.string.da_btn_1, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                int id = exercise.getId();
+                eds.deleteExercise(id);
+                Intent intent = new Intent(ModifyDeleteExercise.this, ExerciseView.class);
+                startActivity(intent);
+
+                // User pressed YES button. Write Logic Here
+                Toast.makeText(getApplicationContext(), "You clicked on YES",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Setting Neutral "Cancel" Button
+        alert.setNeutralButton(R.string.da_btn_2, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(ModifyDeleteExercise.this,ExerciseView.class);
+                startActivity(intent);
+                // User pressed Cancel button. Write Logic Here
+                Toast.makeText(getApplicationContext(), "You clicked on Cancel",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Showing Alert Message
+        alert.show();
     }
 }

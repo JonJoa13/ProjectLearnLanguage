@@ -34,7 +34,7 @@ public class CoursAdapter extends ArrayAdapter<Cours> {
 
         View rowView = inflater.inflate(R.layout.simple_list_view, parent, false);
         TextView textView = (TextView) rowView.findViewById(R.id.tv_list);
-        textView.setText(courses.get(position).getTitre()+ " Level : " + courses.get(position).getId());
+        textView.setText(courses.get(position).getTitre()+ " Level : " + courses.get(position).getLevel());
 
         return rowView;
     }

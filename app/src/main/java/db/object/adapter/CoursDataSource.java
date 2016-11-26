@@ -104,14 +104,6 @@ public class CoursDataSource {
          */
         public void deleteCours(long id){
 
-            //RecordDataSource pra = new RecordDataSource(context);
-            //get all records of the user
-            //List<Record> records = pra.getAllRecordsByPerson(id);
-
-            //for(Record record : records){
-            //    pra.deleteRecord(record.getId());
-           // }
-
             //delete the cours
             this.db.delete(CoursEntry.TABLE_COURS, CoursEntry.KEY_ID + " = ?",
                     new String[] { String.valueOf(id) });

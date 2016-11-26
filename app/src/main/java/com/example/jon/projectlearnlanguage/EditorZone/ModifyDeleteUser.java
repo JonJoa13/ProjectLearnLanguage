@@ -81,7 +81,6 @@ public class ModifyDeleteUser extends AppCompatActivity {
     }
 
     public void onClickDeleteUser(View w){
-        Intent intent = new Intent(ModifyDeleteUser.this,UserView.class);
         AlertDialog.Builder alert = new AlertDialog.Builder (this);
         // Setting Dialog Title
         alert.setTitle(R.string.da_titel);
