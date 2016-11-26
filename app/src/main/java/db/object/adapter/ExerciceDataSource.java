@@ -102,7 +102,7 @@ public class ExerciceDataSource {
     public List<Exercise> getAllExercisesByUser(long user_id){
         List<Exercise> exercises = new ArrayList<Exercise>();
         String sql = "SELECT * FROM " + ExerciseEntry.TABLE_EXERCISE + " r, "
-                + UserEntry.TABLE_USER + " p, " + CoursUserEntry.CREATE_TABLE_COURS_USER + " pr "
+                + UserEntry.TABLE_USER + " p, " + CoursUserEntry.TABLE_COURS_USER + " pr "
                 + " WHERE p." + ExerciseEntry.KEY_ID + " = " + user_id
                 + " AND p." + ExerciseEntry.KEY_ID + " = " + "pr." + CoursUserEntry.KEY_USER_ID
                 + " AND r." + ExerciseEntry.KEY_ID + " = " + "pr." + CoursUserEntry.KEY_COURS_ID;
