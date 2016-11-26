@@ -9,6 +9,20 @@ public class Cours {
     private String titre;
     private int level;
 
+    public Cours(){};
+
+    public Cours(String titre, int level){
+        this.titre = titre;
+        this.level = level;
+    }
+
+    public Cours(int id, String titre, int level){
+        this.id = id;
+        this.titre = titre;
+        this.level = level;
+    }
+
+
     public int getId() {
         return id;
     }

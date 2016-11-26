@@ -36,6 +36,7 @@ public class ChoiceDataSource {
         long id;
         ContentValues values = new ContentValues();
         values.put(ChoiceEntry.KEY_DESCR, choice.getDescription());
+        values.put(ChoiceEntry.KEY_IDEXERCICE, choice.getIdExercice());
         values.put(ChoiceEntry.KEY_CHOICE1, choice.getChoice1());
         values.put(ChoiceEntry.KEY_CHOICE2, choice.getChoice2());
         values.put(ChoiceEntry.KEY_CHOICE3, choice.getChoice3());
@@ -63,6 +64,7 @@ public class ChoiceDataSource {
         Choice choice = new Choice();
         choice.setId(cursor.getInt(cursor.getColumnIndex(ChoiceEntry.KEY_ID)));
         choice.setDescription(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_DESCR)));
+        choice.setIdExercice(cursor.getInt(cursor.getColumnIndex(ChoiceEntry.KEY_IDEXERCICE)));
         choice.setChoice1(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE1)));
         choice.setChoice2(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE2)));
         choice.setChoice3(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE3)));
@@ -90,6 +92,7 @@ public class ChoiceDataSource {
                 Choice choice = new Choice();
                 choice.setId(cursor.getInt(cursor.getColumnIndex(ChoiceEntry.KEY_ID)));
                 choice.setDescription(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_DESCR)));
+                choice.setIdExercice(cursor.getInt(cursor.getColumnIndex(ChoiceEntry.KEY_IDEXERCICE)));
                 choice.setChoice1(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE1)));
                 choice.setChoice2(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE2)));
                 choice.setChoice3(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE3)));
@@ -115,6 +118,7 @@ public class ChoiceDataSource {
                 Choice choice = new Choice();
                 choice.setId(cursor.getInt(cursor.getColumnIndex(ChoiceEntry.KEY_ID)));
                 choice.setDescription(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_DESCR)));
+                choice.setIdExercice(cursor.getInt(cursor.getColumnIndex(ChoiceEntry.KEY_IDEXERCICE)));
                 choice.setChoice1(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE1)));
                 choice.setChoice2(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE2)));
                 choice.setChoice3(cursor.getString(cursor.getColumnIndex(ChoiceEntry.KEY_CHOICE3)));

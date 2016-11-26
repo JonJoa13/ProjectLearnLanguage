@@ -20,19 +20,17 @@ public class CreateChoice extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = getIntent();
         setContentView(R.layout.activity_create_choice);
     }
 
     //onClick go back to the ChoiceView layout
     public void onClickBackToChoiceView(View v){
         Intent intent = new Intent(CreateChoice.this,ChoiceView.class);
+        startActivity(intent);
     }
 
     //onClick create a new choice in the database
     public void onClickCreateChoice(View v){
-        SQLiteHelper mDbHelper = new SQLiteHelper(this);
-        SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
         EditText editTextDescription,
                  editTextChoice1,
@@ -49,15 +47,9 @@ public class CreateChoice extends AppCompatActivity {
         String choice2 = editTextChoice2.getText().toString();
         String choice3 = editTextChoice3.getText().toString();
 
-        Choice choice = new Choice();
-        choice.setDescription(description);
-        choice.setChoice1(choice1);
-        choice.setChoice2(choice2);
-        choice.setChoice3(choice3);
-
         ChoiceDataSource cds = new ChoiceDataSource(getApplicationContext()) ;
 
-        cds.createChoice(choice);
+        cds.createChoice(new Choice(description,choice1,choice2,choice3));
 
         Intent intent = new Intent (CreateChoice.this,ChoiceView.class);
         startActivity(intent);

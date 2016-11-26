@@ -19,12 +19,9 @@ import db.object.object.User;
 
 public class CreateUser extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = getIntent();
         setContentView(R.layout.activity_create_user);
 
     }
@@ -36,8 +33,6 @@ public class CreateUser extends AppCompatActivity {
 
     //onClick create a new user in the database
     public void onClickCreateUser(View v){
-        SQLiteHelper mDbHelper = new SQLiteHelper(this);
-        SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
         EditText editTextName,
                  editTextFirstname,

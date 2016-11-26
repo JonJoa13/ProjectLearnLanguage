@@ -14,15 +14,14 @@ import java.io.Reader;
 
 import db.object.ReaderContract;
 import db.object.SQLiteHelper;
+import db.object.adapter.CoursDataSource;
+import db.object.object.Cours;
 
 public class CreateCours extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Intent intent = getIntent();
-
         setContentView(R.layout.activity_create_cours);
     }
 
@@ -33,15 +32,6 @@ public class CreateCours extends AppCompatActivity {
     }
 
     public void onClickCreateCours(View w){
-        Intent intent = new Intent(CreateCours.this, CoursView.class);
-        startActivity(intent);
-
-        createCours();
-    }
-    //onClick create a new cours in the database
-    public void createCours(){
-        SQLiteHelper mDbHelper = new SQLiteHelper(this);
-        SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
         EditText editTextCours,
                 editTextLevel;
@@ -50,14 +40,11 @@ public class CreateCours extends AppCompatActivity {
         editTextLevel = (EditText)findViewById(R.id.et_level);
 
         String cours = editTextCours.getText().toString();
-        String level = editTextLevel.getText().toString();
+        int level = Integer.parseInt(editTextLevel.getText().toString());
 
-        ContentValues values = new ContentValues();
-        values.put(ReaderContract.CoursEntry.KEY_TITRE, cours);
-        values.put(ReaderContract.CoursEntry.KEY_LEVEL, level);
+        CoursDataSource cds = new CoursDataSource(getApplicationContext());
 
-        db.insert(ReaderContract.CoursEntry.TABLE_COURS, ReaderContract.CoursEntry.KEY_NULLABLE, values);
-        db.close();
+        cds.createCours(new Cours(cours,level));
 
         Intent intent = new Intent(CreateCours.this, CoursView.class);
         startActivity(intent);

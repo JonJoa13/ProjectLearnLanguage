@@ -15,9 +15,9 @@
     <Button
         android:text="@string/btn_back"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_backToChoiceViewFromCreateChoice"
+        android:id="@+id/btn_backToCoursViewFromModDelCours"
         android:layout_width="wrap_content"
-        android:onClick="onClickBackToCoursView"/>
+        android:onClick="onClickBackToChoiceViewFromModifyDelete"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -35,12 +35,29 @@
             android:layout_marginTop="20dp" />
 
         <TextView
+            android:text="@string/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_description"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/et_description"
+            android:background="?attr/colorButtonNormal"
+            android:minHeight="30dp" />
+
+        <TextView
             android:text="@string/cv_choice1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tv_choice1"
             android:textSize="18sp"
-            android:layout_marginTop="50dp" />
+            android:layout_marginTop="10dp" />
 
         <EditText
             android:layout_width="match_parent"

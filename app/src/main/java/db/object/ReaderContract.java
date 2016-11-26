@@ -21,7 +21,7 @@ public final class ReaderContract {
         public static final String TABLE_COURS = "cours";
 
         //Cours Column names
-        public static final String KEY_ID = "id";
+        public static final String KEY_ID = "_id";
         public static final String KEY_TITRE = "titre";
         public static final String KEY_LEVEL = "level";
         public static final String KEY_NULLABLE = "";
@@ -41,7 +41,7 @@ public final class ReaderContract {
         public static final String TABLE_EXERCISE = "exercise";
 
         //Exercise Column names
-        public static final String KEY_ID = "id";
+        public static final String KEY_ID = "_id";
         public static final String KEY_TITRE = "titre";
         public static final String KEY_TYPE = "type";
         public static final String KEY_IDCOURS = "idcours";
@@ -67,7 +67,7 @@ public final class ReaderContract {
         public static final String TABLE_USER = "user";
 
         //User Column names
-        public static final String KEY_ID = "id";
+        public static final String KEY_ID = "_id";
         public static final String KEY_NAME = "name";
         public static final String KEY_FIRSTNAME = "firstname";
         public static final String KEY_EMAIL = "email";
@@ -92,11 +92,12 @@ public final class ReaderContract {
         public static final String TABLE_CHOICE = "choix";
 
         //Choice Column names
-        public static final String KEY_ID = "id";
+        public static final String KEY_ID = "_id";
         public static final String KEY_DESCR = "descr";
         public static final String KEY_CHOICE1 = "choice1";
         public static final String KEY_CHOICE2 = "choice2";
         public static final String KEY_CHOICE3 = "choice3";
+        public static final String KEY_IDEXERCICE = "idExercice";
         public static final String KEY_NULLABLE = "";
 
         //Table choice create statement
@@ -105,6 +106,7 @@ public final class ReaderContract {
                 + ChoiceEntry.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + ChoiceEntry.KEY_DESCR + " TEXT, "
                 + ChoiceEntry.KEY_CHOICE1 + " TEXT, "
+                + ChoiceEntry.KEY_IDEXERCICE + " INTEGER, "
                 + ChoiceEntry.KEY_CHOICE2 + " TEXT, "
                 + ChoiceEntry.KEY_CHOICE3 + " TEXT, "
                 + ChoiceEntry.KEY_NULLABLE + " TEXT"
@@ -117,7 +119,7 @@ public final class ReaderContract {
         public static final String TABLE_COURS_USER = "cours_user";
 
         //Table cours_user Column names
-        public static final String KEY_ID = "id";
+        public static final String KEY_ID = "_id";
         public static final String KEY_COURS_ID = "cours_id";
         public static final String KEY_USER_ID = "user_id";
         public static final String KEY_NULLABLE = "";
@@ -139,7 +141,7 @@ public final class ReaderContract {
         public static final String TABLE_EXERCISE_CHOICE = "exercise_choice";
 
         //Table exercice_choice Column names
-        public static final String KEY_ID = "id";
+        public static final String KEY_ID = "_id";
         public static final String KEY_EXERCISE_ID = "exercice_id";
         public static final String KEY_CHOICE_ID = "choice_id";
         public static final String KEY_NULLABLE = "";

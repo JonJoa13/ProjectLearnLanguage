@@ -2,24 +2,17 @@ package com.example.jon.projectlearnlanguage.EditorZone;
 
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 
 import com.example.jon.projectlearnlanguage.R;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-import db.object.ReaderContract;
 import db.object.SQLiteHelper;
 import db.object.adapter.UserAdapter;
 import db.object.adapter.UserDataSource;

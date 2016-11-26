@@ -7,9 +7,29 @@ package db.object.object;
 public class Choice {
     private int id;
     private String description;
+    private int idExercice;
     private String choice1;
     private String choice2;
     private String choice3;
+
+    public Choice(){};
+
+    public Choice(String description, String choice1, String choice2, String choice3)
+    {
+        this.description = description;
+        this.choice1 = choice1;
+        this.choice2 = choice2;
+        this.choice3 = choice3;
+    }
+
+    public Choice(int id, String description, String choice1, String choice2, String choice3)
+    {
+        this.description = description;
+        this.id = id;
+        this.choice1 = choice1;
+        this.choice2 = choice2;
+        this.choice3 = choice3;
+    }
 
 
     public int getId() {
@@ -26,6 +46,14 @@ public class Choice {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getIdExercice() {
+        return idExercice;
+    }
+
+    public void setIdExercice(int idExercice) {
+        this.idExercice = idExercice;
     }
 
     public String getChoice1() {

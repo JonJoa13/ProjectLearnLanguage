@@ -12,15 +12,14 @@ import com.example.jon.projectlearnlanguage.R;
 
 import db.object.ReaderContract;
 import db.object.SQLiteHelper;
+import db.object.adapter.ExerciceDataSource;
+import db.object.object.Exercise;
 
 public class CreateExercise extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Intent intent = getIntent();
-
         setContentView(R.layout.activity_create_exercise);
     }
     //onClick go back to the ExerciseView layout
@@ -31,23 +30,13 @@ public class CreateExercise extends AppCompatActivity {
 
 
     public void onClickCreateExercise(View w){
-        Intent intent = new Intent(CreateExercise.this, ExerciseView.class);
-        startActivity(intent);
-
-        createExercise();
-    }
-
-    //onClick create a new exercise in the database
-    public void createExercise(){
-        SQLiteHelper mDbHelper = new SQLiteHelper(this);
-        SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
         EditText editTextTitleEx,
                 editTextType,
                 editTextContent,
                 editTextSolution;
 
-        editTextTitleEx = (EditText)findViewById(R.id.et_titleEx);
+        editTextTitleEx = (EditText)findViewById(R.id.et_titelEx);
         editTextType = (EditText)findViewById(R.id.et_type);
         editTextContent = (EditText)findViewById(R.id.et_content);
         editTextSolution = (EditText)findViewById(R.id.et_solution);
@@ -57,15 +46,9 @@ public class CreateExercise extends AppCompatActivity {
         String content = editTextContent.getText().toString();
         String solution = editTextSolution.getText().toString();
 
+        ExerciceDataSource eds = new ExerciceDataSource(getApplicationContext());
 
-        ContentValues values = new ContentValues();
-        values.put(ReaderContract.ExerciseEntry.KEY_TITRE, titre);
-        values.put(ReaderContract.ExerciseEntry.KEY_TYPE, type);
-        values.put(ReaderContract.ExerciseEntry.KEY_DONNEE, content);
-        values.put(ReaderContract.ExerciseEntry.KEY_SOLUTION, solution);
-
-        db.insert(ReaderContract.ExerciseEntry.TABLE_EXERCISE, ReaderContract.ExerciseEntry.KEY_NULLABLE, values);
-        db.close();
+        eds.createExercise(new Exercise(titre,type,content,solution));
 
         Intent intent = new Intent(CreateExercise.this, ExerciseView.class);
         startActivity(intent);
