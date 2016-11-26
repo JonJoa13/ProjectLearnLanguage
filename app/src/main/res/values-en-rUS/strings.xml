@@ -160,4 +160,10 @@
     <string name="btn_verify">Verify</string>
     <string name="btn_login">Login</string>
 
+    <!-- DialogAlert -->
+    <string name="da_titel">Confirm delete</string>
+    <string name="da_message">Are you sure you want delete this?</string>
+    <string name="da_btn_1">YES</string>
+    <string name="da_btn_2">CANCEL</string>
+
 </resources>
