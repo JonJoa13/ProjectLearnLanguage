@@ -32,8 +32,16 @@ public class Parametres extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+
     public void onClickMenuParamFromParametres(View w){
         Intent intent = new Intent(Parametres.this,MenuParam.class);
+        startActivity(intent);
+    }
+
+
+    public void onClickBackToChoiceViewFromCreateChoice(View view) {
+        Intent intent = new Intent(Parametres.this,ChoixLangues.class);
         startActivity(intent);
     }
 }
