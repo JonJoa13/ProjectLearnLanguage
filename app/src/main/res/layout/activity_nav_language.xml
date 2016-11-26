@@ -35,21 +35,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_fr"
         android:elevation="1dp"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:onClick="onClickChangeLanguageFr"/>
 
     <Button
         android:text="@string/btn_en"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_en" />
-
-    <Button
-        android:text="@string/btn_edit"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_edit"
-        android:layout_width="222dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="50dp"
-        android:onClick="onClickModify" />
+        android:id="@+id/btn_en"
+        android:onClick="onClickChangeLanguageEn"/>
 
 </LinearLayout>

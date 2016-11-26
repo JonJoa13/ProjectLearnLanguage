@@ -32,7 +32,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/LearnFrench"
+            android:id="@+id/btn_learnFrench"
             android:textAlignment="center"
             android:text="@string/LearnFrench"
             android:onClick="onClickIChoixDifficulte"/>
@@ -41,7 +41,7 @@
             android:text="@string/LearnEnglish"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/LearnEnglish"
+            android:id="@+id/btn_learnEnglish"
             android:onClick="onClickIChoixDifficulte"/>
     </LinearLayout>
 
