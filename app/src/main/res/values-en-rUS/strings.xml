@@ -165,5 +165,14 @@
     <string name="da_message">Are you sure you want delete this?</string>
     <string name="da_btn_1">YES</string>
     <string name="da_btn_2">CANCEL</string>
+    <string name="da_alertConfirmDelete">DELETED</string>
+
+
+    <!-- DialogAlert Suppression -->
+    <string name="da_editTitel">Confirm edit</string>
+    <string name="da_editMessage">Are you sure you want edit this?</string>
+    <string name="da_alertConfirmEdit">EDITED</string>
+
+    <string name="da_alertCreate">CREATED</string>
 
 </resources>

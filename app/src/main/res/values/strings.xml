@@ -161,10 +161,19 @@
     <string name="btn_verify">Vérifier</string>
     <string name="btn_login">Login</string>
 
-    <!-- DialogAlert -->
+    <!-- DialogAlert Suppression -->
     <string name="da_titel">Confirmer suppression</string>
     <string name="da_message">Êtes-vous sûr de vouloir supprimer cela?</string>
     <string name="da_btn_1">OUI</string>
     <string name="da_btn_2">ANNULER</string>
+    <string name="da_alertConfirmDelete">SUPPRIMÉ</string>
+
+    <!-- DialogAlert Suppression -->
+    <string name="da_editTitel">Confirmer modification</string>
+    <string name="da_editMessage">Êtes-vous sûr de vouloir modifier cela?</string>
+    <string name="da_alertConfirmEdit">MODIFIÉ</string>
+
+
+    <string name="da_alertCreate">CRÉÉ</string>
 
 </resources>

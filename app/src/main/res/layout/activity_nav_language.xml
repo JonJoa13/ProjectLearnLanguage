@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_settings">
 
     <Button
         android:text="@string/btn_back"
@@ -27,7 +28,9 @@
         android:id="@+id/tv_selectLanguage"
         android:layout_marginTop="10dp"
         android:textSize="14sp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal|bold" />
 
     <Button
         android:text="@string/btn_fr"

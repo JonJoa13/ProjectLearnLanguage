@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.jon.projectlearnlanguage.R;
 
 import db.object.adapter.ExerciceDataSource;
+import db.object.object.Choice;
 import db.object.object.Exercise;
 
 public class ModifyDeleteExercise extends AppCompatActivity {
@@ -63,17 +64,47 @@ public class ModifyDeleteExercise extends AppCompatActivity {
     }
 
     public void onClickModifyEx(View w){
-        int id = exercise.getId();
-        String titre = editTextTitel.getText().toString();
-        String type = editTextType.getText().toString();
-        String content = editTextContent.getText().toString();
-        String solution = editTextSolution.getText().toString();
+        AlertDialog.Builder alert = new AlertDialog.Builder (this);
+        // Setting Dialog Title
+        alert.setTitle(R.string.da_editTitel);
 
-        Exercise updatedExercise = new Exercise(id,titre,type,content,solution);
-        eds.updateExercise(updatedExercise);
+        // Setting Dialog Message
+        alert.setMessage(R.string.da_editMessage);
 
-        Intent intent = new Intent(ModifyDeleteExercise.this,ExerciseView.class);
-        startActivity(intent);
+        // Setting Icon to Dialog
+        alert.setIcon(R.drawable.ic_delete_forever);
+
+        // Setting Positive "Yes" Button
+        alert.setPositiveButton(R.string.da_btn_1, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                int id = exercise.getId();
+                String titre = editTextTitel.getText().toString();
+                String type = editTextType.getText().toString();
+                String content = editTextContent.getText().toString();
+                String solution = editTextSolution.getText().toString();
+
+                Exercise updatedExercise = new Exercise(id,titre,type,content,solution);
+                eds.updateExercise(updatedExercise);
+
+                Intent intent = new Intent(ModifyDeleteExercise.this,ExerciseView.class);
+                startActivity(intent);
+
+                Toast.makeText(getApplicationContext(), R.string.da_alertConfirmEdit,
+                        Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        // Setting Neutral "Cancel" Button
+        alert.setNeutralButton(R.string.da_btn_2, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(ModifyDeleteExercise.this,ExerciseView.class);
+                startActivity(intent);
+            }
+        });
+
+        // Showing Alert Message
+        alert.show();
     }
 
     public void onClickDeleteEx(View w){
@@ -96,7 +127,7 @@ public class ModifyDeleteExercise extends AppCompatActivity {
                 startActivity(intent);
 
                 // User pressed YES button. Write Logic Here
-                Toast.makeText(getApplicationContext(), "You clicked on YES",
+                Toast.makeText(getApplicationContext(), R.string.da_alertConfirmDelete,
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -106,9 +137,6 @@ public class ModifyDeleteExercise extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 Intent intent = new Intent(ModifyDeleteExercise.this,ExerciseView.class);
                 startActivity(intent);
-                // User pressed Cancel button. Write Logic Here
-                Toast.makeText(getApplicationContext(), "You clicked on Cancel",
-                        Toast.LENGTH_SHORT).show();
             }
         });
 

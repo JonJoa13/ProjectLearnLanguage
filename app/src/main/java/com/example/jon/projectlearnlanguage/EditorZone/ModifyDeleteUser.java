@@ -17,6 +17,7 @@ import com.example.jon.projectlearnlanguage.R;
 import db.object.ReaderContract;
 import db.object.SQLiteHelper;
 import db.object.adapter.UserDataSource;
+import db.object.object.Exercise;
 import db.object.object.User;
 
 public class ModifyDeleteUser extends AppCompatActivity {
@@ -67,17 +68,46 @@ public class ModifyDeleteUser extends AppCompatActivity {
     }
 
     public void onClickModifyUser(View w){
-        int id = user.getId();
-        String name = editTextName.getText().toString();
-        String firstname = editTextFirstname.getText().toString();
-        String email = editTextEmail.getText().toString();
-        String mdp = editTextMDP.getText().toString();
+        AlertDialog.Builder alert = new AlertDialog.Builder (this);
+        // Setting Dialog Title
+        alert.setTitle(R.string.da_editTitel);
 
-        User updatedUser = new User(id,name,firstname,email,mdp);
-        uds.updateUser(updatedUser);
+        // Setting Dialog Message
+        alert.setMessage(R.string.da_editMessage);
 
-        Intent intent = new Intent(ModifyDeleteUser.this,UserView.class);
-        startActivity(intent);
+        // Setting Icon to Dialog
+        alert.setIcon(R.drawable.ic_delete_forever);
+
+        // Setting Positive "Yes" Button
+        alert.setPositiveButton(R.string.da_btn_1, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                int id = user.getId();
+                String name = editTextName.getText().toString();
+                String firstname = editTextFirstname.getText().toString();
+                String email = editTextEmail.getText().toString();
+                String mdp = editTextMDP.getText().toString();
+
+                User updatedUser = new User(id,name,firstname,email,mdp);
+                uds.updateUser(updatedUser);
+
+                Intent intent = new Intent(ModifyDeleteUser.this,UserView.class);
+                startActivity(intent);
+
+                Toast.makeText(getApplicationContext(), R.string.da_alertConfirmEdit,
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Setting Neutral "Cancel" Button
+        alert.setNeutralButton(R.string.da_btn_2, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(ModifyDeleteUser.this,UserView.class);
+                startActivity(intent);
+            }
+        });
+
+        // Showing Alert Message
+        alert.show();
     }
 
     public void onClickDeleteUser(View w){
@@ -99,8 +129,7 @@ public class ModifyDeleteUser extends AppCompatActivity {
                 Intent intent = new Intent(ModifyDeleteUser.this, UserView.class);
                 startActivity(intent);
 
-                // User pressed YES button. Write Logic Here
-                Toast.makeText(getApplicationContext(), "You clicked on YES",
+                Toast.makeText(getApplicationContext(), R.string.da_alertConfirmDelete,
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -110,9 +139,6 @@ public class ModifyDeleteUser extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 Intent intent = new Intent(ModifyDeleteUser.this,UserView.class);
                 startActivity(intent);
-                // User pressed Cancel button. Write Logic Here
-                Toast.makeText(getApplicationContext(), "You clicked on Cancel",
-                        Toast.LENGTH_SHORT).show();
             }
         });
 

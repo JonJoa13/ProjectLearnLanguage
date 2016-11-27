@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.jon.projectlearnlanguage.R;
 
@@ -55,6 +56,8 @@ public class CreateUser extends AppCompatActivity {
 
         Intent intent = new Intent(CreateUser.this, UserView.class);
         startActivity(intent);
+        Toast.makeText(getApplicationContext(), R.string.da_alertCreate,
+                Toast.LENGTH_SHORT).show();
     }
 
 }

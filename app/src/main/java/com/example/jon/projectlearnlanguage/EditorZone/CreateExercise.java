@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.jon.projectlearnlanguage.R;
 
@@ -52,5 +53,7 @@ public class CreateExercise extends AppCompatActivity {
 
         Intent intent = new Intent(CreateExercise.this, ExerciseView.class);
         startActivity(intent);
+        Toast.makeText(getApplicationContext(), R.string.da_alertCreate,
+                Toast.LENGTH_SHORT).show();
     }
 }

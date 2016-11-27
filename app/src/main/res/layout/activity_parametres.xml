@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_settings">
 
     <Button
         android:text="@string/btn_back"
@@ -16,9 +17,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_compte"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:layout_marginTop="20dp"
-        android:paddingLeft="5dp" />
+        android:paddingLeft="5dp"
+        android:textStyle="normal|bold" />
 
     <TextView
         android:text="@string/tv_userEmail"

@@ -63,17 +63,45 @@ public class ModifyDeleteChoice extends AppCompatActivity {
     }
 
     public void onClickModifyChoice(View w){
-        int id = choice.getId();
-        String description = editTextDescription.getText().toString();
-        String choice1 = editTextChoice1.getText().toString();
-        String choice2 = editTextChoice2.getText().toString();
-        String choice3 = editTextChoice3.getText().toString();
+        AlertDialog.Builder alert = new AlertDialog.Builder (this);
+        // Setting Dialog Title
+        alert.setTitle(R.string.da_editTitel);
 
-        Choice updatedChoice = new Choice(id,description,choice1,choice2,choice3);
-        cds.updateChoice(updatedChoice);
+        // Setting Dialog Message
+        alert.setMessage(R.string.da_editMessage);
 
-        Intent intent = new Intent(ModifyDeleteChoice.this,ChoiceView.class);
-        startActivity(intent);
+        // Setting Icon to Dialog
+        alert.setIcon(R.drawable.ic_delete_forever);
+
+        // Setting Positive "Yes" Button
+        alert.setPositiveButton(R.string.da_btn_1, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                int id = choice.getId();
+                String description = editTextDescription.getText().toString();
+                String choice1 = editTextChoice1.getText().toString();
+                String choice2 = editTextChoice2.getText().toString();
+                String choice3 = editTextChoice3.getText().toString();
+                Choice updatedChoice = new Choice(id,description,choice1,choice2,choice3);
+                cds.updateChoice(updatedChoice);
+                Intent intent = new Intent(ModifyDeleteChoice.this, ChoiceView.class);
+                startActivity(intent);
+
+                // User pressed YES button. Write Logic Here
+                Toast.makeText(getApplicationContext(), R.string.da_alertConfirmEdit,
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Setting Neutral "Cancel" Button
+        alert.setNeutralButton(R.string.da_btn_2, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(ModifyDeleteChoice.this,ChoiceView.class);
+                startActivity(intent);
+            }
+        });
+
+        // Showing Alert Message
+        alert.show();
     }
 
     public void onClickDeleteChoice(View w){
@@ -96,7 +124,7 @@ public class ModifyDeleteChoice extends AppCompatActivity {
                 startActivity(intent);
 
                 // User pressed YES button. Write Logic Here
-                Toast.makeText(getApplicationContext(), "You clicked on YES",
+                Toast.makeText(getApplicationContext(), R.string.da_alertConfirmDelete,
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -106,9 +134,6 @@ public class ModifyDeleteChoice extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 Intent intent = new Intent(ModifyDeleteChoice.this,ChoiceView.class);
                 startActivity(intent);
-                // User pressed Cancel button. Write Logic Here
-                Toast.makeText(getApplicationContext(), "You clicked on Cancel",
-                        Toast.LENGTH_SHORT).show();
             }
         });
 

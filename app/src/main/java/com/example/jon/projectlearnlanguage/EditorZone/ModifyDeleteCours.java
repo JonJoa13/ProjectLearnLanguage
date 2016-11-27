@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.jon.projectlearnlanguage.R;
 
 import db.object.adapter.CoursDataSource;
+import db.object.object.Choice;
 import db.object.object.Cours;
 
 public class ModifyDeleteCours extends AppCompatActivity {
@@ -61,15 +62,43 @@ public class ModifyDeleteCours extends AppCompatActivity {
 
 
     public void onClickModifyCours(View w){
-        int id = cours.getId();
-        String cours = editTextCours.getText().toString();
-        int level = Integer.parseInt(editTextLevel.getText().toString());
+        AlertDialog.Builder alert = new AlertDialog.Builder (this);
+        // Setting Dialog Title
+        alert.setTitle(R.string.da_editTitel);
 
-        Cours updatedCours = new Cours(id, cours, level);
-        cds.updateCours(updatedCours);
+        // Setting Dialog Message
+        alert.setMessage(R.string.da_editMessage);
 
-        Intent intent = new Intent(ModifyDeleteCours.this,CoursView.class);
-        startActivity(intent);
+        // Setting Icon to Dialog
+        alert.setIcon(R.drawable.ic_delete_forever);
+
+        // Setting Positive "Yes" Button
+        alert.setPositiveButton(R.string.da_btn_1, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                int id = cours.getId();
+                String cours = editTextCours.getText().toString();
+                int level = Integer.parseInt(editTextLevel.getText().toString());
+
+                Cours updatedCours = new Cours(id, cours, level);
+                cds.updateCours(updatedCours);
+                Intent intent = new Intent(ModifyDeleteCours.this,CoursView.class);
+                startActivity(intent);
+
+                Toast.makeText(getApplicationContext(), R.string.da_alertConfirmEdit,
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Setting Neutral "Cancel" Button
+        alert.setNeutralButton(R.string.da_btn_2, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(ModifyDeleteCours.this,CoursView.class);
+                startActivity(intent);
+            }
+        });
+
+        // Showing Alert Message
+        alert.show();
     }
 
     public void onClickDeleteCours(View w){
@@ -92,7 +121,7 @@ public class ModifyDeleteCours extends AppCompatActivity {
                 startActivity(intent);
 
                 // User pressed YES button. Write Logic Here
-                Toast.makeText(getApplicationContext(), "You clicked on YES",
+                Toast.makeText(getApplicationContext(), R.string.da_alertConfirmDelete,
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -102,9 +131,6 @@ public class ModifyDeleteCours extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 Intent intent = new Intent(ModifyDeleteCours.this,CoursView.class);
                 startActivity(intent);
-                // User pressed Cancel button. Write Logic Here
-                Toast.makeText(getApplicationContext(), "You clicked on Cancel",
-                        Toast.LENGTH_SHORT).show();
             }
         });
 

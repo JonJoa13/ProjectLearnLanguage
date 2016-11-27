@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.jon.projectlearnlanguage.R;
 
@@ -48,6 +49,8 @@ public class CreateCours extends AppCompatActivity {
 
         Intent intent = new Intent(CreateCours.this, CoursView.class);
         startActivity(intent);
+        Toast.makeText(getApplicationContext(), R.string.da_alertCreate,
+                Toast.LENGTH_SHORT).show();
     }
 
 

@@ -25,30 +25,33 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:id="@+id/et_mdpactuel"
-        android:text="@string/et_mdpactuel"
+        android:hint="@string/et_mdpactuel"
         android:layout_marginTop="20dp"
         android:background="?attr/colorButtonNormal"
-        android:minHeight="30dp" />
+        android:minHeight="30dp"
+        android:inputType="textPassword" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:id="@+id/et_newmdp"
-        android:text="@string/et_newmdp"
+        android:hint="@string/et_newmdp"
         android:layout_marginTop="20dp"
         android:background="?attr/colorButtonNormal"
-        android:minHeight="30dp" />
+        android:minHeight="30dp"
+        android:inputType="textPassword" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:id="@+id/et_confirmmdp"
-        android:text="@string/et_confirmmdp"
+        android:hint="@string/et_confirmmdp"
         android:layout_marginTop="20dp"
         android:background="?attr/colorButtonNormal"
-        android:minHeight="30dp" />
+        android:minHeight="30dp"
+        android:inputType="textPassword" />
 
     <Button
         android:text="@string/btn_edit"

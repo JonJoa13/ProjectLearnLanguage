@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jon.projectlearnlanguage.EditorZone.CreateUser"
     android:orientation="vertical"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@drawable/bg_appli">
 
     <Button
         android:text="@string/btn_back"
@@ -38,7 +39,8 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/Users_List" />
+            android:id="@+id/Users_List"
+            android:textStyle="normal|bold" />
 
     </LinearLayout>
 
