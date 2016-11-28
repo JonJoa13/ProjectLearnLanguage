@@ -29,6 +29,10 @@ public class Exercise {
         this.solution = solution;
     }
 
+    public Exercise(int idCours){
+        this.idCours = idCours;
+    }
+
 
     public int getId() {
         return id;

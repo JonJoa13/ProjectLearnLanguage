@@ -37,6 +37,7 @@ public class ModifyDeleteCours extends AppCompatActivity {
             } else {
                 coursId = bundle.getInt("idCours");
             }
+
         }else{
             coursId = (int) savedInstanceState.getSerializable("idCours");
         }
@@ -137,4 +138,5 @@ public class ModifyDeleteCours extends AppCompatActivity {
         // Showing Alert Message
         alert.show();
     }
+
 }

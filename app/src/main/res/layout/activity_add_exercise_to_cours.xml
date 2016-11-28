@@ -23,7 +23,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="381dp">
+        android:layout_height="match_parent">
 
         <TextView
             android:text="@string/tv_titel"
@@ -36,26 +36,12 @@
             android:textStyle="normal|bold" />
 
         <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:id="@+id/Exercises_List"
             android:dividerHeight="5dp"
             android:divider="#ffffff" />
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:text="@string/addEx"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_addEx"
-            android:onClick="onClickAddExercicesToCours"/>
 
     </LinearLayout>
 

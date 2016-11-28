@@ -5,6 +5,13 @@
     android:weightSum="1"
     android:background="@drawable/bg_appli">
 
+    <Button
+        android:text="@string/btn_back"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_backtoSelectActionFromLogin"
+        android:layout_width="wrap_content"
+        android:onClick="onClickBackToSelectActionFromLogin"/>
+
     <TextView
         android:text="@string/tv_titel"
         android:layout_width="match_parent"

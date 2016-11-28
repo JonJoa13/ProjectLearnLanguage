@@ -10,7 +10,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.jon.projectlearnlanguage.EditorZone.AddExerciseToCours;
+import com.example.jon.projectlearnlanguage.EditorZone.ModifyDeleteCours;
 import com.example.jon.projectlearnlanguage.EditorZone.ModifyDeleteUser;
+import com.example.jon.projectlearnlanguage.EditorZone.SelectAction;
 import com.example.jon.projectlearnlanguage.EditorZone.UserView;
 
 import db.object.adapter.UserDataSource;
@@ -27,9 +30,12 @@ public class Inscription extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent intent = getIntent();
-
         setContentView(R.layout.activity_inscription);
+    }
+
+    public void onClickBackToSelectActionFromRegister(View w){
+        Intent intent = new Intent(Inscription.this,WelcomePage.class);
+        startActivity(intent);
     }
 
     public void onClickChoixLanguesFromInscription(View w){
@@ -59,8 +65,7 @@ public class Inscription extends AppCompatActivity {
             // Setting Positive "Yes" Button
             alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = getIntent();
-                    startActivity(intent);
+
                 }
             });
 

@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.jon.projectlearnlanguage.EditorZone.SelectAction;
+
 public class ChoixLangues extends AppCompatActivity {
 
     @Override
@@ -43,4 +45,8 @@ public class ChoixLangues extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickBackToSelectActionFromCL(View view) {
+        Intent intent = new Intent(ChoixLangues.this,WelcomePage.class);
+        startActivity(intent);
+    }
 }

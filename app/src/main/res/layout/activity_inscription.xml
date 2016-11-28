@@ -5,11 +5,20 @@
     android:weightSum="1"
     android:background="@drawable/bg_appli">
 
+    <Button
+        android:text="@string/btn_back"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_backToSelectActionFromRegister"
+        android:layout_width="wrap_content"
+        android:onClick="onClickBackToSelectActionFromRegister"/>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
 
         <TextView
             android:text="@string/tv_titel"

@@ -60,7 +60,7 @@
 
     <!-- activity_create_cours -->
     <string name="cc_cours">Cours</string>
-    <string name="cc_level">Level</string>
+    <string name="cc_level">Level (1 = easy, 5 = very hard)</string>
 
     <!-- activity_EditorZone -->
     <string name="ez_create">Create</string>

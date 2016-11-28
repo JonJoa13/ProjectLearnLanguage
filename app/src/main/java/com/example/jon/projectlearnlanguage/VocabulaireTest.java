@@ -2,6 +2,7 @@ package com.example.jon.projectlearnlanguage;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.provider.SyncStateContract;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -58,7 +59,9 @@ public class VocabulaireTest extends AppCompatActivity {
         rep2_en = "blue";
         rep3_en = "white";
         rep4_en = "green";
-       rep5_en = "orange";
+        rep5_en = "orange";
+
+
 //
 //
 //        Locale current = getResources().getConfiguration().locale;

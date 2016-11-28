@@ -142,6 +142,13 @@ public class ExerciceDataSource {
                 new String[] { String.valueOf(exercise.getId()) });
     }
 
+    public int updateCoursToExercise(Exercise exercise){
+        ContentValues values = new ContentValues();
+        values.put(ExerciseEntry.KEY_IDCOURS, exercise.getIdCours());
+        return this.db.update(ExerciseEntry.TABLE_EXERCISE, values, ExerciseEntry.KEY_ID + " = ?",
+                new String[] { String.valueOf(exercise.getId()) });
+    }
+
     /**
      * Delete an Exercise - this will also delete all choices for the exercise
      */

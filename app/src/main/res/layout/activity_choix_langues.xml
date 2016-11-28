@@ -11,6 +11,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/bg_appli">
 
+    <Button
+        android:text="@string/btn_back"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_backtoSelectActionFromCL"
+        android:layout_width="wrap_content"
+        android:onClick="onClickBackToSelectActionFromCL"/>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -18,14 +25,6 @@
         android:layout_marginTop="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_learnFrench"
-            android:textAlignment="center"
-            android:text="@string/LearnFrench"
-            android:onClick="onClickIChoixDifficulte"/>
 
         <Button
             android:text="@string/LearnEnglish"
