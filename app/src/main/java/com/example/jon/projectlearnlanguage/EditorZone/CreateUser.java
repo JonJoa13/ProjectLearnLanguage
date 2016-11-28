@@ -1,20 +1,14 @@
 package com.example.jon.projectlearnlanguage.EditorZone;
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.jon.projectlearnlanguage.R;
 
-import db.object.ReaderContract;
-import db.object.SQLiteHelper;
 import db.object.adapter.UserDataSource;
 import db.object.object.User;
 

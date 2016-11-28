@@ -1,20 +1,14 @@
 package com.example.jon.projectlearnlanguage.EditorZone;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.database.sqlite.SQLiteDatabase;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.jon.projectlearnlanguage.R;
 
-import java.io.Reader;
-
-import db.object.ReaderContract;
-import db.object.SQLiteHelper;
 import db.object.adapter.CoursDataSource;
 import db.object.object.Cours;
 
@@ -52,6 +46,5 @@ public class CreateCours extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), R.string.da_alertCreate,
                 Toast.LENGTH_SHORT).show();
     }
-
 
 }

@@ -5,18 +5,12 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
-
-import com.example.jon.projectlearnlanguage.EditorZone.SelectAction;
-
-import db.object.object.User;
 
 public class Login extends AppCompatActivity {
     EditText editTextEmail,
-             editTextMDP;
+            editTextMDP;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

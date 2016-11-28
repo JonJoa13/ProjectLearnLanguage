@@ -9,8 +9,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.jon.projectlearnlanguage.ChangePWD;
-import com.example.jon.projectlearnlanguage.Parametres;
 import com.example.jon.projectlearnlanguage.R;
 
 import java.util.ArrayList;
@@ -19,7 +17,6 @@ import java.util.List;
 import db.object.SQLiteHelper;
 import db.object.adapter.ExerciceAdapter;
 import db.object.adapter.ExerciceDataSource;
-import db.object.object.Cours;
 import db.object.object.Exercise;
 
 public class AddExerciseToCours extends AppCompatActivity {

@@ -52,7 +52,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         db.execSQL(CoursUserEntry.CREATE_TABLE_COURS_USER);
     }
 
-
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //drop old tables

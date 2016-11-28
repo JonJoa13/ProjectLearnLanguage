@@ -49,7 +49,7 @@ public class Inscription extends AppCompatActivity {
         String email = editTextEmail.getText().toString();
         String mdp = editTextMDP.getText().toString();
 
-        UserDataSource uds = new UserDataSource(getApplicationContext());
+        uds = new UserDataSource(getApplicationContext());
 
         if(name.equals("") || firstname.equals("")|| email.equals("") || mdp.equals("")){
             AlertDialog.Builder alert = new AlertDialog.Builder (this);
