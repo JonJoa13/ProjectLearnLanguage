@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage.EditorZone;
 
 import android.content.DialogInterface;
@@ -35,6 +38,7 @@ public class ModifyDeleteUser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modify_delete_user);
 
+        //get the idUser of the user selected to return the information about it
         uds = new UserDataSource(this);
 
         if(savedInstanceState == null){
@@ -67,6 +71,8 @@ public class ModifyDeleteUser extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //On click on the button modify, ask if the user really want to do it with a warning
+    // if yes save the changes in the database
     public void onClickModifyUser(View w){
         AlertDialog.Builder alert = new AlertDialog.Builder (this);
         // Setting Dialog Title
@@ -110,6 +116,8 @@ public class ModifyDeleteUser extends AppCompatActivity {
         alert.show();
     }
 
+    //On click on the delete button, ask the user if he really want to delete it
+    // with a warning, if yes, the choice is deleted from the database
     public void onClickDeleteUser(View w){
         AlertDialog.Builder alert = new AlertDialog.Builder (this);
         // Setting Dialog Title

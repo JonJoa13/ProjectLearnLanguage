@@ -173,6 +173,7 @@
     <string name="da_editTitel">Confirm edit</string>
     <string name="da_editMessage">Are you sure you want edit this?</string>
     <string name="da_alertConfirmEdit">EDITED</string>
+    <string name="da_alertNotSamePDW">Passwords are not the same</string>
 
     <string name="da_alertCreate">CREATED</string>
 

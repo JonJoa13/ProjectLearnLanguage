@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package db.object.adapter;
 
 import android.content.ContentValues;
@@ -11,9 +14,6 @@ import java.util.List;
 import db.object.SQLiteHelper;
 import db.object.object.Cours;
 
-/**
- * Created by TheoP on 18.11.2016.
- */
 
 public class CoursDataSource {
 

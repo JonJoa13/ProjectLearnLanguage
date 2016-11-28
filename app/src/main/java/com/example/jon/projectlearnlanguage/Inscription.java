@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage;
 
 import android.content.DialogInterface;
@@ -32,12 +35,13 @@ public class Inscription extends AppCompatActivity {
 
         setContentView(R.layout.activity_inscription);
     }
-
+    //OnClick go back to the SelectAction layout
     public void onClickBackToSelectActionFromRegister(View w){
         Intent intent = new Intent(Inscription.this,WelcomePage.class);
         startActivity(intent);
     }
 
+    //Register, save new user and go to the ChoixLangues layout
     public void onClickChoixLanguesFromInscription(View w){
         editTextName = (EditText)findViewById(R.id.et_name);
         editTextFirstname = (EditText) findViewById(R.id.et_firstname);

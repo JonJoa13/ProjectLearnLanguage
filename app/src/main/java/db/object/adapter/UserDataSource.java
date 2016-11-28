@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package db.object.adapter;
 
 import android.content.ContentValues;
@@ -13,9 +16,6 @@ import db.object.SQLiteHelper;
 import db.object.object.Exercise;
 import db.object.object.User;
 
-/**
- * Created by TheoP on 18.11.2016.
- */
 
 public class UserDataSource {
     private SQLiteHelper helper;

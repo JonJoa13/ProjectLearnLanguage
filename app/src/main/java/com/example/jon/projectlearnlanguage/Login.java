@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage;
 
 import android.content.DialogInterface;
@@ -20,16 +23,19 @@ public class Login extends AppCompatActivity {
         editTextMDP = (EditText) findViewById(R.id.et_mdp);
     }
 
+    //OnClick go back to the SelectAction layout
     public void onClickBackToSelectActionFromLogin(View w){
         Intent intent = new Intent(Login.this,WelcomePage.class);
         startActivity(intent);
     }
 
+    //OnClick go to the Inscription layout
     public void onClickIncriptionFromLogin(View w){
         Intent intent = new Intent(Login.this,Inscription.class);
         startActivity(intent);
     }
 
+    //OnClick go to the choixLangues layout
     public void onClickChoixLanguesFromLogin(View w){
         String email = editTextEmail.getText().toString();
         String mdp = editTextMDP.getText().toString();

@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage;
 
 import android.content.ComponentName;

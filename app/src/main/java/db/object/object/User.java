@@ -1,8 +1,9 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package db.object.object;
 
-/**
- * Created by TheoP on 15.11.2016.
- */
+
 
 public class User {
     private int id;

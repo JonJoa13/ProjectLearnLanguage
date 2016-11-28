@@ -172,6 +172,7 @@
     <string name="da_editTitel">Confirmer modification</string>
     <string name="da_editMessage">Êtes-vous sûr de vouloir modifier cela?</string>
     <string name="da_alertConfirmEdit">MODIFIÉ</string>
+    <string name="da_alertNotSamePDW">Les mots de passes sont différents</string>
 
     <string name="da_alertCreate">CRÉÉ</string>
 

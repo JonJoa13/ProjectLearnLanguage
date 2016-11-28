@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package db.object.adapter;
 
 import android.content.Context;
@@ -13,9 +16,7 @@ import java.util.List;
 
 import db.object.object.User;
 
-/**
- * Created by Jon on 26.11.2016.
- */
+
 
 public class UserAdapter extends ArrayAdapter<User> {
 

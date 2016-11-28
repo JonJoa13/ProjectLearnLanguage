@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage.EditorZone;
 
 import android.content.Intent;
@@ -25,7 +28,7 @@ public class CreateExercise extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    //onClick create a new exercise in the database
     public void onClickCreateExercise(View w){
 
         EditText editTextTitle,

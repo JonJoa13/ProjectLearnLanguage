@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage.EditorZone;
 
 import android.content.DialogInterface;
@@ -28,6 +31,7 @@ public class ModifyDeleteCours extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modify_delete_cours);
 
+        //get the idCours of the cours selected to return the information about it
         cds = new CoursDataSource(this);
 
         if(savedInstanceState == null){
@@ -51,17 +55,19 @@ public class ModifyDeleteCours extends AppCompatActivity {
         editTextLevel.setText(String.valueOf(cours.getLevel()));
     }
 
+    //On click back to the CoursView layout
     public void onClickBackToCoursView(View w){
         Intent intent = new Intent(ModifyDeleteCours.this,CoursView.class);
         startActivity(intent);
     }
-
+    //On click, go to the addExToCours layout
     public void onClickAddExToCours(View w){
         Intent intent = new Intent(ModifyDeleteCours.this,AddExerciseToCours.class);
         startActivity(intent);
     }
 
-
+    //On click on the button modify, ask if the user really want to do it with a warning
+    // if yes save the changes in the database
     public void onClickModifyCours(View w){
         AlertDialog.Builder alert = new AlertDialog.Builder (this);
         // Setting Dialog Title
@@ -102,6 +108,8 @@ public class ModifyDeleteCours extends AppCompatActivity {
         alert.show();
     }
 
+    //On click on the delete button, ask the user if he really want to delete it
+    // with a warning, if yes, the choice is deleted from the database
     public void onClickDeleteCours(View w){
         AlertDialog.Builder alert = new AlertDialog.Builder (this);
         // Setting Dialog Title

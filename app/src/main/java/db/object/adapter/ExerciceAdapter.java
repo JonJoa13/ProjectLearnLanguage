@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package db.object.adapter;
 
 import android.content.Context;
@@ -13,9 +16,6 @@ import java.util.List;
 
 import db.object.object.Exercise;
 
-/**
- * Created by Jon on 26.11.2016.
- */
 
 public class ExerciceAdapter extends ArrayAdapter<Exercise> {
 

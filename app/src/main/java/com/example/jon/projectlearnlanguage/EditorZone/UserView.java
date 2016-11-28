@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage.EditorZone;
 
 import android.content.Context;
@@ -32,7 +35,7 @@ public class UserView extends AppCompatActivity {
         setContentView(R.layout.activity_user_view);
         context = this;
 
-
+        //Add the list of user in the listview
         final UserDataSource uds = new UserDataSource(this);
         helper.getInstance(context);
 

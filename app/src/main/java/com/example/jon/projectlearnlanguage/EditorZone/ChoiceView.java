@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage.EditorZone;
 
 import android.content.Context;
@@ -32,7 +35,7 @@ public class ChoiceView extends AppCompatActivity {
 
         context = this;
 
-
+        //Add the list of choice in the listview
         final ChoiceDataSource cds = new ChoiceDataSource(this);
         helper.getInstance(context);
 

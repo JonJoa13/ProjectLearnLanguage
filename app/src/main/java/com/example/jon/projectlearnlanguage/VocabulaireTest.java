@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage;
 
 import android.content.Intent;
@@ -15,11 +18,13 @@ public class VocabulaireTest extends AppCompatActivity {
         setContentView(R.layout.activity_vocabulaire_test);
     }
 
+    //OnClick go back to the Vocabulaire layout
     public void onClickBackToVoc(View w){
         Intent intent = new Intent(VocabulaireTest.this,Vocabulaire.class);
         startActivity(intent);
     }
 
+    //OnClick go to the ChoixExercices layout
     public void onClickControlVoc(View w) {
         //Function not complete --> just return to exercise
         Intent intent = new Intent(VocabulaireTest.this,ChoixExercices.class);

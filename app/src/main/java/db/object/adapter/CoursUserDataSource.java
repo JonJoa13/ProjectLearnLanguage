@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package db.object.adapter;
 
 import android.content.ContentValues;
@@ -6,9 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import db.object.SQLiteHelper;
 import db.object.ReaderContract.CoursUserEntry;
 
-/**
- * Created by TheoP on 18.11.2016.
- */
+
 
 public class CoursUserDataSource {
     private SQLiteDatabase db;

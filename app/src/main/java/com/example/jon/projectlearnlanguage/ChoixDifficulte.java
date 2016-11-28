@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage;
 
 import android.content.Intent;
@@ -16,11 +19,13 @@ public class ChoixDifficulte extends AppCompatActivity {
         setContentView(R.layout.activity_choix_difficulte);
     }
 
+    //OnClick go to ChoixExercices layout
     public void onClickChoixExercices(View w){
         Intent intent = new Intent(ChoixDifficulte.this,ChoixExercices.class);
         startActivity(intent);
     }
 
+    //OnClick go back to the choixLangues layout
     public void onClickBackToChoixLangues(View w){
         Intent intent = new Intent(ChoixDifficulte.this,ChoixLangues.class);
         startActivity(intent);

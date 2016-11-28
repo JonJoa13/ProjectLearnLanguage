@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage;
 
 import android.content.Intent;
@@ -27,7 +30,7 @@ public class ChoixLangues extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu,menu);
         return super.onCreateOptionsMenu(menu);
     }
-
+    //Add the action bar to the layout
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.Acceuil_item:
@@ -40,11 +43,13 @@ public class ChoixLangues extends AppCompatActivity {
         return true;
     }
 
+    //OnClick go to the choixDifficulte layout
     public void onClickIChoixDifficulte(View w){
         Intent intent = new Intent(ChoixLangues.this,ChoixDifficulte.class);
         startActivity(intent);
     }
 
+    //OnClick go back to the choixLangues layout
     public void onClickBackToSelectActionFromCL(View view) {
         Intent intent = new Intent(ChoixLangues.this,WelcomePage.class);
         startActivity(intent);

@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage;
 
 import android.content.DialogInterface;
@@ -39,40 +42,48 @@ public class ChangePWD extends AppCompatActivity implements View.OnClickListener
         editText_confirmMdp.setOnClickListener(this);
     }
 
+        //on click on the modify button, ask if the user really want to do it
+        // with a warning, if yes, change in the database
        public void onClickModifyMDP(View w){
-        AlertDialog.Builder alertEdit = new AlertDialog.Builder (this);
-        // Setting Dialog Title
-        alertEdit.setTitle(R.string.da_editTitel);
+           if(editText_newMdp == editText_confirmMdp){
+               AlertDialog.Builder alertEdit = new AlertDialog.Builder (this);
+               // Setting Dialog Title
+               alertEdit.setTitle(R.string.da_editTitel);
 
-        // Setting Dialog Message
-        alertEdit.setMessage(R.string.da_editMessage);
+               // Setting Dialog Message
+               alertEdit.setMessage(R.string.da_editMessage);
 
-        // Setting Icon to Dialog
-        alertEdit.setIcon(R.drawable.ic_delete_forever);
+               // Setting Icon to Dialog
+               alertEdit.setIcon(R.drawable.ic_delete_forever);
 
-        // Setting Positive "Yes" Button
-        alertEdit.setPositiveButton(R.string.da_btn_1, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                Intent intent = new Intent(ChangePWD.this,Parametres.class);
-                startActivity(intent);
+               // Setting Positive "Yes" Button
+               alertEdit.setPositiveButton(R.string.da_btn_1, new DialogInterface.OnClickListener() {
+                   public void onClick(DialogInterface dialog, int which) {
+                       Intent intent = new Intent(ChangePWD.this,Parametres.class);
+                       startActivity(intent);
 
-                Toast.makeText(getApplicationContext(), R.string.da_alertConfirmEdit,
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
+                       Toast.makeText(getApplicationContext(), R.string.da_alertConfirmEdit,
+                               Toast.LENGTH_SHORT).show();
+                   }
+               });
 
-        // Setting Neutral "Cancel" Button
-        alertEdit.setNeutralButton(R.string.da_btn_2, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                Intent intent = new Intent(ChangePWD.this,Parametres.class);
-                startActivity(intent);
-            }
-        });
+               // Setting Neutral "Cancel" Button
+               alertEdit.setNeutralButton(R.string.da_btn_2, new DialogInterface.OnClickListener() {
+                   public void onClick(DialogInterface dialog, int which) {
+                       Intent intent = new Intent(ChangePWD.this,Parametres.class);
+                       startActivity(intent);
+                   }
+               });
 
-        // Showing Alert Message
-        alertEdit.show();
+               // Showing Alert Message
+               alertEdit.show();
+           }else {
+               Toast.makeText(getApplicationContext(), R.string.da_alertNotSamePDW,
+                       Toast.LENGTH_SHORT).show();
+           }
+
     }
-
+    //onClick back to the settings layout
     public void onClickBackToParam(View w){
         Intent intent = new Intent(ChangePWD.this,Parametres.class);
         startActivity(intent);

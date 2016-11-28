@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage.EditorZone;
 
 import android.content.Context;
@@ -32,7 +35,7 @@ public class CoursView extends AppCompatActivity {
 
         context = this;
 
-
+        //Add the list of cours in the listview
         final CoursDataSource cds = new CoursDataSource(this);
         helper.getInstance(context);
 

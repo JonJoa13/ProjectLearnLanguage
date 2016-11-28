@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage.EditorZone;
 
 import android.content.Context;
@@ -32,7 +35,7 @@ public class ExerciseView extends AppCompatActivity {
         setContentView(R.layout.activity_exercise_view);
         context = this;
 
-
+        //Add the list of exercise in the listview
         final ExerciceDataSource eds = new ExerciceDataSource(this);
         helper.getInstance(context);
 

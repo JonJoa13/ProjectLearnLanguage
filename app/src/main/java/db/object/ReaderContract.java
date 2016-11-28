@@ -1,13 +1,12 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package db.object;
 
 import android.provider.BaseColumns;
 
 import db.object.object.Exercise;
 
-
-/**
- * Created by TheoP on 15.11.2016.
- */
 
 public final class ReaderContract {
     public ReaderContract(){

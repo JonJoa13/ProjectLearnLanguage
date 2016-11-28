@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage.EditorZone;
 
 import android.content.Intent;
@@ -25,7 +28,7 @@ public class CreateCours extends AppCompatActivity {
         Intent intent = new Intent(CreateCours.this, CoursView.class);
         startActivity(intent);
     }
-
+    //onClick create a new cours in the database
     public void onClickCreateCours(View w){
 
         EditText editTextCours,

@@ -1,3 +1,6 @@
+/**
+ * Author: Théodore Pillet and Jonathan Joaquim.
+ */
 package com.example.jon.projectlearnlanguage.EditorZone;
 
 import android.content.DialogInterface;
@@ -29,6 +32,7 @@ public class ModifyDeleteChoice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modify_delete_choice);
 
+        //get the idChoice of the choice selected to return the information about it
         cds = new ChoiceDataSource(this);
 
         if(savedInstanceState == null){
@@ -56,12 +60,14 @@ public class ModifyDeleteChoice extends AppCompatActivity {
 
 
     }
-
+    // On click back to the choiceView layout
     public void onClickBackToChoiceViewFromModifyDelete(View w){
         Intent intent = new Intent(ModifyDeleteChoice.this,ChoiceView.class);
         startActivity(intent);
     }
 
+    //On click on the button modify, save the changes in the database
+    // and ask if the user really want to do it with a warning
     public void onClickModifyChoice(View w){
         AlertDialog.Builder alert = new AlertDialog.Builder (this);
         // Setting Dialog Title
@@ -103,7 +109,8 @@ public class ModifyDeleteChoice extends AppCompatActivity {
         // Showing Alert Message
         alert.show();
     }
-
+    //On click on the delete button, ask the user if he really want to delete it
+    // with a warning, if yes, the choice is deleted from the database
     public void onClickDeleteChoice(View w){
         AlertDialog.Builder alert = new AlertDialog.Builder (this);
         // Setting Dialog Title
