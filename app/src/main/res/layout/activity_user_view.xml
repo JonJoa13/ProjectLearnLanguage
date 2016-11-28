@@ -34,13 +34,14 @@
             android:id="@+id/tv_titel"
             android:textSize="30sp"
             android:textAlignment="center"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:textStyle="normal|bold" />
 
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/Users_List"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"/>
 
     </LinearLayout>
 

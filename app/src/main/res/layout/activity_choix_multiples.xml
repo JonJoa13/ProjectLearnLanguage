@@ -77,21 +77,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_red"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="onClickDisplayResult"/>
 
             <Button
                 android:text="@string/btn_blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_blue"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="onClickDisplayResultFalse"/>
 
             <Button
                 android:text="@string/btn_green"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_green"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:onClick="onClickDisplayResultFalse"/>
         </LinearLayout>
 
         <TextView

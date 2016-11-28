@@ -22,13 +22,6 @@ public class ChangePWD extends AppCompatActivity implements View.OnClickListener
             editText_newMdp,
             editText_confirmMdp;
 
-    //String logCurrendMdp = editText_currentMdp.getText().toString();
-//    String logNewMdp = editText_newMdp.getText().toString();
-//    String logConfirmMdp = editText_confirmMdp.getText().toString();
-//
-//    UserDataSource uds;
-//    User user;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,17 +37,9 @@ public class ChangePWD extends AppCompatActivity implements View.OnClickListener
         editText_currentMdp.setOnClickListener(this);
         editText_newMdp.setOnClickListener(this);
         editText_confirmMdp.setOnClickListener(this);
-
     }
 
        public void onClickModifyMDP(View w){
-//        int id = user.getId();
-//        UserDataSource uds = new UserDataSource(this);
-//
-//        user=null;
-//        user = uds.getUserById(id);
-
-
         AlertDialog.Builder alertEdit = new AlertDialog.Builder (this);
         // Setting Dialog Title
         alertEdit.setTitle(R.string.da_editTitel);
@@ -68,9 +53,6 @@ public class ChangePWD extends AppCompatActivity implements View.OnClickListener
         // Setting Positive "Yes" Button
         alertEdit.setPositiveButton(R.string.da_btn_1, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                //int id = exercise.getId();
-               // eds.deleteExercise(id);
-
                 Intent intent = new Intent(ChangePWD.this,Parametres.class);
                 startActivity(intent);
 
@@ -84,7 +66,6 @@ public class ChangePWD extends AppCompatActivity implements View.OnClickListener
             public void onClick(DialogInterface dialog, int which) {
                 Intent intent = new Intent(ChangePWD.this,Parametres.class);
                 startActivity(intent);
-
             }
         });
 
@@ -96,7 +77,6 @@ public class ChangePWD extends AppCompatActivity implements View.OnClickListener
         Intent intent = new Intent(ChangePWD.this,Parametres.class);
         startActivity(intent);
     }
-
 
     @Override
     public void onClick(View v) {

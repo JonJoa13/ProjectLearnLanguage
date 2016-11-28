@@ -12,7 +12,7 @@ public class Choice {
     private String choice2;
     private String choice3;
 
-    public Choice(){};
+    public Choice(){}
 
     public Choice(String description, String choice1, String choice2, String choice3)
     {

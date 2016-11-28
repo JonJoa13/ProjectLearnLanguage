@@ -12,7 +12,7 @@ public class Exercise {
     private String donnee;
     private String solution;
 
-    public Exercise(){};
+    public Exercise(){}
 
     public Exercise(String titre, String type, String donnee, String solution){
         this.titre = titre;

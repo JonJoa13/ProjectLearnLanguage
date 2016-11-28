@@ -95,6 +95,7 @@
     <string name="btn_blue">Blue</string>
     <string name="btn_green">Green</string>
     <string name="tv_correct">Correct!</string>
+    <string name="tv_wrong">Incorrect!</string>
 
     <!-- activity_inscription && activity_login-->
     <string name="tv_titel">LearnMe</string>
@@ -173,5 +174,8 @@
     <string name="da_alertConfirmEdit">MODIFIÉ</string>
 
     <string name="da_alertCreate">CRÉÉ</string>
+
+    <string name="da_editTitelResult">ERREUR(S)</string>
+    <string name="da_errorMessage">Information(s) manquante(s) !</string>
 
 </resources>

@@ -9,7 +9,7 @@ public class Cours {
     private String titre;
     private int level;
 
-    public Cours(){};
+    public Cours(){}
 
     public Cours(String titre, int level){
         this.titre = titre;

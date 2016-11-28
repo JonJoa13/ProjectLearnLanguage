@@ -139,7 +139,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText5"
+                    android:id="@+id/et_rep1"
                     android:textSize="30sp"
                     android:singleLine="false"
                     android:selectAllOnFocus="false"
@@ -151,7 +151,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText4"
+                    android:id="@+id/et_rep2"
                     android:textSize="30sp"
                     android:minHeight="55dp" />
 
@@ -160,7 +160,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText3"
+                    android:id="@+id/et_rep3"
                     android:textSize="30sp"
                     android:minHeight="55dp"
                     android:background="?attr/colorButtonNormal" />
@@ -170,7 +170,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText2"
+                    android:id="@+id/et_rep4"
                     android:textSize="30sp"
                     android:minHeight="55dp" />
 
@@ -179,7 +179,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/editText"
+                    android:id="@+id/et_rep5"
                     android:textSize="30sp"
                     android:minHeight="55dp"
                     android:background="?attr/colorButtonNormal" />
@@ -193,8 +193,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_verify"
         android:layout_marginBottom="12dp"
+        android:onClick="onClickControlVoc"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClickControlVoc" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
