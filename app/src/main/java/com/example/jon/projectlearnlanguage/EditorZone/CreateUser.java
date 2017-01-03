@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.jon.projectlearnlanguage.EndpointsAsyncTaskUser;
 import com.example.jon.projectlearnlanguage.R;
 
 import db.object.adapter.UserDataSource;
@@ -50,6 +51,16 @@ public class CreateUser extends AppCompatActivity {
         UserDataSource uds = new UserDataSource(getApplicationContext());
 
         uds.createUser(new User(name,firstname,email,mdp));
+
+
+        servlets.backend.userApi.model.User userBackend = new servlets.backend.userApi.model.User();
+
+        userBackend.setName(name);
+        userBackend.setFirstname(firstname);
+        userBackend.setEmail(email);
+        userBackend.setMdp(mdp);
+
+        new EndpointsAsyncTaskUser(userBackend).execute();
 
         Intent intent = new Intent(CreateUser.this, UserView.class);
         startActivity(intent);

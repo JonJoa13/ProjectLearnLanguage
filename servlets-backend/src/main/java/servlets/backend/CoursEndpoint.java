@@ -58,7 +58,7 @@ public class CoursEndpoint {
             name = "get",
             path = "cours/{id}",
             httpMethod = ApiMethod.HttpMethod.GET)
-    public Cours get(@Named("id") int id) throws NotFoundException {
+    public Cours get(@Named("id") long id) throws NotFoundException {
         logger.info("Getting Cours with ID: " + id);
         Cours cours = ofy().load().type(Cours.class).id(id).now();
         if (cours == null) {
@@ -99,7 +99,7 @@ public class CoursEndpoint {
             name = "update",
             path = "cours/{id}",
             httpMethod = ApiMethod.HttpMethod.PUT)
-    public Cours update(@Named("id") int id, Cours cours) throws NotFoundException {
+    public Cours update(@Named("id") long id, Cours cours) throws NotFoundException {
         // TODO: You should validate your ID parameter against your resource's ID here.
         checkExists(id);
         ofy().save().entity(cours).now();
@@ -118,7 +118,7 @@ public class CoursEndpoint {
             name = "remove",
             path = "cours/{id}",
             httpMethod = ApiMethod.HttpMethod.DELETE)
-    public void remove(@Named("id") int id) throws NotFoundException {
+    public void remove(@Named("id") long id) throws NotFoundException {
         checkExists(id);
         ofy().delete().type(Cours.class).id(id).now();
         logger.info("Deleted Cours with ID: " + id);
@@ -149,7 +149,7 @@ public class CoursEndpoint {
         return CollectionResponse.<Cours>builder().setItems(coursList).setNextPageToken(queryIterator.getCursor().toWebSafeString()).build();
     }
 
-    private void checkExists(int id) throws NotFoundException {
+    private void checkExists(long id) throws NotFoundException {
         try {
             ofy().load().type(Cours.class).id(id).safe();
         } catch (com.googlecode.objectify.NotFoundException e) {

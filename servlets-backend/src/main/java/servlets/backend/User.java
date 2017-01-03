@@ -15,7 +15,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     private String name;
     private String firstname;
     private String email;
@@ -30,7 +30,7 @@ public class User {
         this.mdp=mdp;
     }
 
-    public User(int id, String name, String firstname, String email, String mdp ){
+    public User(long id, String name, String firstname, String email, String mdp ){
         this.id = id;
         this.name = name;
         this.firstname = firstname;
@@ -38,11 +38,11 @@ public class User {
         this.mdp = mdp;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

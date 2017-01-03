@@ -15,7 +15,7 @@ public class Exercise {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     private String titre;
     private String type;
     private int idCours;
@@ -31,7 +31,7 @@ public class Exercise {
         this.solution = solution;
     }
 
-    public Exercise(int id, String titre, String type, String donnee, String solution){
+    public Exercise(long id, String titre, String type, String donnee, String solution){
         this.id = id;
         this.titre = titre;
         this.type = type;
@@ -44,11 +44,11 @@ public class Exercise {
     }
 
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

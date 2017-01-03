@@ -15,7 +15,7 @@ public class Cours {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     private String titre;
     private int level;
 
@@ -26,18 +26,18 @@ public class Cours {
         this.level = level;
     }
 
-    public Cours(int id, String titre, int level){
+    public Cours(long id, String titre, int level){
         this.id = id;
         this.titre = titre;
         this.level = level;
     }
 
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
