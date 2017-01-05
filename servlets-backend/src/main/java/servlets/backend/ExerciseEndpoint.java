@@ -58,7 +58,7 @@ public class ExerciseEndpoint {
             name = "get",
             path = "exercise/{id}",
             httpMethod = ApiMethod.HttpMethod.GET)
-    public Exercise get(@Named("id") long id) throws NotFoundException {
+    public Exercise get(@Named("id") Long id) throws NotFoundException {
         logger.info("Getting Exercise with ID: " + id);
         Exercise exercise = ofy().load().type(Exercise.class).id(id).now();
         if (exercise == null) {
@@ -99,7 +99,7 @@ public class ExerciseEndpoint {
             name = "update",
             path = "exercise/{id}",
             httpMethod = ApiMethod.HttpMethod.PUT)
-    public Exercise update(@Named("id") long id, Exercise exercise) throws NotFoundException {
+    public Exercise update(@Named("id") Long id, Exercise exercise) throws NotFoundException {
         // TODO: You should validate your ID parameter against your resource's ID here.
         checkExists(id);
         ofy().save().entity(exercise).now();
@@ -118,7 +118,7 @@ public class ExerciseEndpoint {
             name = "remove",
             path = "exercise/{id}",
             httpMethod = ApiMethod.HttpMethod.DELETE)
-    public void remove(@Named("id") long id) throws NotFoundException {
+    public void remove(@Named("id") Long id) throws NotFoundException {
         checkExists(id);
         ofy().delete().type(Exercise.class).id(id).now();
         logger.info("Deleted Exercise with ID: " + id);
@@ -149,7 +149,7 @@ public class ExerciseEndpoint {
         return CollectionResponse.<Exercise>builder().setItems(exerciseList).setNextPageToken(queryIterator.getCursor().toWebSafeString()).build();
     }
 
-    private void checkExists(long id) throws NotFoundException {
+    private void checkExists(Long id) throws NotFoundException {
         try {
             ofy().load().type(Exercise.class).id(id).safe();
         } catch (com.googlecode.objectify.NotFoundException e) {

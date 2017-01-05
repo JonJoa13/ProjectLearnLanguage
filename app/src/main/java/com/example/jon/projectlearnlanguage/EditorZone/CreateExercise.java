@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.jon.projectlearnlanguage.EndpointsAsyncTaskExercise;
 import com.example.jon.projectlearnlanguage.R;
 
 import db.object.adapter.ExerciceDataSource;
@@ -49,6 +50,15 @@ public class CreateExercise extends AppCompatActivity {
         ExerciceDataSource eds = new ExerciceDataSource(getApplicationContext());
 
         eds.createExercise(new Exercise(titre,type,content,solution));
+
+        servlets.backend.exerciseApi.model.Exercise exerciseBackend = new servlets.backend.exerciseApi.model.Exercise();
+
+        exerciseBackend.setTitre(titre);
+        exerciseBackend.setType(type);
+        exerciseBackend.setDonnee(content);
+        exerciseBackend.setSolution(solution);
+
+        new EndpointsAsyncTaskExercise(exerciseBackend).execute();
 
         Intent intent = new Intent(CreateExercise.this, ExerciseView.class);
         startActivity(intent);

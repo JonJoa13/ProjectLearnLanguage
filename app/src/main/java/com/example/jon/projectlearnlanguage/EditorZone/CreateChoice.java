@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.jon.projectlearnlanguage.EndpointsAsyncTaskChoice;
 import com.example.jon.projectlearnlanguage.R;
 
 import db.object.adapter.ChoiceDataSource;
@@ -50,6 +51,16 @@ public class CreateChoice extends AppCompatActivity {
         ChoiceDataSource cds = new ChoiceDataSource(getApplicationContext()) ;
 
         cds.createChoice(new Choice(description,choice1,choice2,choice3));
+
+        servlets.backend.choiceApi.model.Choice choiceBackend = new servlets.backend.choiceApi.model.Choice();
+
+        choiceBackend.setDescription(description);
+        choiceBackend.setChoice1(choice1);
+        choiceBackend.setChoice2(choice2);
+        choiceBackend.setChoice3(choice3);
+
+        new EndpointsAsyncTaskChoice(choiceBackend).execute();
+
 
         Intent intent = new Intent (CreateChoice.this,ChoiceView.class);
         startActivity(intent);

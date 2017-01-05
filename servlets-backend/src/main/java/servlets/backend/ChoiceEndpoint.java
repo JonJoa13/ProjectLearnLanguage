@@ -58,7 +58,7 @@ public class ChoiceEndpoint {
             name = "get",
             path = "choice/{id}",
             httpMethod = ApiMethod.HttpMethod.GET)
-    public Choice get(@Named("id") long id) throws NotFoundException {
+    public Choice get(@Named("id") Long id) throws NotFoundException {
         logger.info("Getting Choice with ID: " + id);
         Choice choice = ofy().load().type(Choice.class).id(id).now();
         if (choice == null) {
@@ -99,7 +99,7 @@ public class ChoiceEndpoint {
             name = "update",
             path = "choice/{id}",
             httpMethod = ApiMethod.HttpMethod.PUT)
-    public Choice update(@Named("id") long id, Choice choice) throws NotFoundException {
+    public Choice update(@Named("id") Long id, Choice choice) throws NotFoundException {
         // TODO: You should validate your ID parameter against your resource's ID here.
         checkExists(id);
         ofy().save().entity(choice).now();
@@ -118,7 +118,7 @@ public class ChoiceEndpoint {
             name = "remove",
             path = "choice/{id}",
             httpMethod = ApiMethod.HttpMethod.DELETE)
-    public void remove(@Named("id") long id) throws NotFoundException {
+    public void remove(@Named("id") Long id) throws NotFoundException {
         checkExists(id);
         ofy().delete().type(Choice.class).id(id).now();
         logger.info("Deleted Choice with ID: " + id);
@@ -149,7 +149,7 @@ public class ChoiceEndpoint {
         return CollectionResponse.<Choice>builder().setItems(choiceList).setNextPageToken(queryIterator.getCursor().toWebSafeString()).build();
     }
 
-    private void checkExists(long id) throws NotFoundException {
+    private void checkExists(Long id) throws NotFoundException {
         try {
             ofy().load().type(Choice.class).id(id).safe();
         } catch (com.googlecode.objectify.NotFoundException e) {

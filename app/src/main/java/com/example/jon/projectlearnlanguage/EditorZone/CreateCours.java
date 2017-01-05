@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.jon.projectlearnlanguage.EndpointsAsyncTaskCours;
 import com.example.jon.projectlearnlanguage.R;
 
 import db.object.adapter.CoursDataSource;
@@ -43,6 +44,15 @@ public class CreateCours extends AppCompatActivity {
         CoursDataSource cds = new CoursDataSource(getApplicationContext());
 
         cds.createCours(new Cours(cours,level));
+
+
+        servlets.backend.coursApi.model.Cours coursBackend = new servlets.backend.coursApi.model.Cours();
+
+        coursBackend.setTitre(cours);
+        coursBackend.setLevel(level);
+
+        new EndpointsAsyncTaskCours(coursBackend).execute();
+
 
         Intent intent = new Intent(CreateCours.this, CoursView.class);
         startActivity(intent);
