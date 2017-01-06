@@ -53,7 +53,7 @@ public class CreateUser extends AppCompatActivity {
         uds.createUser(new User(name,firstname,email,mdp));
 
 
-        servlets.backend.userApi.model.User userBackend = new servlets.backend.userApi.model.User();
+        servlets.backend.userApi.model.User  userBackend= new servlets.backend.userApi.model.User();
 
         userBackend.setName(name);
         userBackend.setFirstname(firstname);

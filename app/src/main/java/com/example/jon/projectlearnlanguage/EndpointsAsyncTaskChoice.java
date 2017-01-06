@@ -42,13 +42,8 @@ public class EndpointsAsyncTaskChoice extends AsyncTask<Void, Void, List<Choice>
                     // - turn off compression when running against local devappserver
                     // if you deploy on the cloud backend, use your app name
                     // such as https://<your-app-id>.appspot.com
-                    .setRootUrl("http://10.0.2.2:8080/_ah/api/")
-                    .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
-                        @Override
-                        public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {
-                            abstractGoogleClientRequest.setDisableGZipContent(true);
-                        }
-                    });
+                    .setRootUrl("https://hes-project-learnlanguage.appspot.com/_ah/api/");
+
             choiceApi = builder.build();
         }
 

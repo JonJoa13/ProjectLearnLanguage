@@ -15,6 +15,8 @@ import com.example.jon.projectlearnlanguage.R;
 
 import db.object.adapter.ChoiceDataSource;
 import db.object.object.Choice;
+import servlets.backend.coursApi.CoursApi;
+import servlets.backend.coursApi.model.Cours;
 
 public class CreateChoice extends AppCompatActivity {
 
