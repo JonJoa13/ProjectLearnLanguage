@@ -19,14 +19,14 @@ import servlets.backend.userApi.model.User;
  * Author: Théodore Pillet and Jonathan Joaquim.
  */
 
-public class EndpointsAsyncTaskUser extends AsyncTask<Void, Void, List<User>> {
+public class EndpointsAsyncTaskUserDelete extends AsyncTask<Void, Void, List<User>> {
     private static UserApi userApi = null;
     private static final String TAG = EndpointsAsyncTaskUser.class.getName();
     private User user;
 
-    EndpointsAsyncTaskUser(){}
+    EndpointsAsyncTaskUserDelete(){}
 
-    public EndpointsAsyncTaskUser(User user){
+    public EndpointsAsyncTaskUserDelete(User user){
         this.user = user;
     }
 
@@ -44,7 +44,6 @@ public class EndpointsAsyncTaskUser extends AsyncTask<Void, Void, List<User>> {
                     // such as https://<your-app-id>.appspot.com
                     .setRootUrl("https://hes-project-learnlanguage.appspot.com/_ah/api/");
 
-
             userApi = builder.build();
         }
 
@@ -52,8 +51,8 @@ public class EndpointsAsyncTaskUser extends AsyncTask<Void, Void, List<User>> {
             // Call here the wished methods on the Endpoints
             // For instance insert
             if(user != null){
-                userApi.insert(user).execute();
-                Log.i(TAG, "insert user");
+                userApi.remove(user.getId()).execute();
+                Log.i(TAG, "delete user");
             }
             // and for instance return the list of all employees
             return userApi.list().execute().getItems();

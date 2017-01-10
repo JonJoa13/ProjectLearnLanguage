@@ -52,10 +52,13 @@ public class CreateChoice extends AppCompatActivity {
 
         ChoiceDataSource cds = new ChoiceDataSource(getApplicationContext()) ;
 
-        cds.createChoice(new Choice(description,choice1,choice2,choice3));
+        Long id = cds.createChoice(new Choice(description,choice1,choice2,choice3));
+
+        //Choice choice = cds.getChoiceById(id);
 
         servlets.backend.choiceApi.model.Choice choiceBackend = new servlets.backend.choiceApi.model.Choice();
 
+        choiceBackend.setId(id);
         choiceBackend.setDescription(description);
         choiceBackend.setChoice1(choice1);
         choiceBackend.setChoice2(choice2);

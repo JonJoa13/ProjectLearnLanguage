@@ -50,15 +50,17 @@ public class CreateUser extends AppCompatActivity {
 
         UserDataSource uds = new UserDataSource(getApplicationContext());
 
-        uds.createUser(new User(name,firstname,email,mdp));
+        Long id = uds.createUser(new User(name,firstname,email,mdp));
 
+        User user = uds.getUserById(id);
 
         servlets.backend.userApi.model.User  userBackend= new servlets.backend.userApi.model.User();
 
-        userBackend.setName(name);
-        userBackend.setFirstname(firstname);
-        userBackend.setEmail(email);
-        userBackend.setMdp(mdp);
+        userBackend.setId(id);
+        userBackend.setName(user.getName());
+        userBackend.setFirstname(user.getFirstname());
+        userBackend.setEmail(user.getEmail());
+        userBackend.setMdp(user.getMdp());
 
         new EndpointsAsyncTaskUser(userBackend).execute();
 

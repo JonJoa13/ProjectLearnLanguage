@@ -19,14 +19,14 @@ import servlets.backend.userApi.model.User;
  * Author: Théodore Pillet and Jonathan Joaquim.
  */
 
-public class EndpointsAsyncTaskUser extends AsyncTask<Void, Void, List<User>> {
+public class EndpointsAsyncTaskUserUpdate extends AsyncTask<Void, Void, List<User>> {
     private static UserApi userApi = null;
     private static final String TAG = EndpointsAsyncTaskUser.class.getName();
     private User user;
 
-    EndpointsAsyncTaskUser(){}
+    EndpointsAsyncTaskUserUpdate(){}
 
-    public EndpointsAsyncTaskUser(User user){
+    public EndpointsAsyncTaskUserUpdate(User user){
         this.user = user;
     }
 
@@ -52,8 +52,8 @@ public class EndpointsAsyncTaskUser extends AsyncTask<Void, Void, List<User>> {
             // Call here the wished methods on the Endpoints
             // For instance insert
             if(user != null){
-                userApi.insert(user).execute();
-                Log.i(TAG, "insert user");
+                userApi.update(user.getId(),user).execute();
+                Log.i(TAG, "update user");
             }
             // and for instance return the list of all employees
             return userApi.list().execute().getItems();

@@ -49,14 +49,17 @@ public class CreateExercise extends AppCompatActivity {
 
         ExerciceDataSource eds = new ExerciceDataSource(getApplicationContext());
 
-        eds.createExercise(new Exercise(titre,type,content,solution));
+        Long id = eds.createExercise(new Exercise(titre,type,content,solution));
+
+        Exercise exercise = eds.getExerciseById(id);
 
         servlets.backend.exerciseApi.model.Exercise exerciseBackend = new servlets.backend.exerciseApi.model.Exercise();
 
-        exerciseBackend.setTitre(titre);
-        exerciseBackend.setType(type);
-        exerciseBackend.setDonnee(content);
-        exerciseBackend.setSolution(solution);
+        exerciseBackend.setId(id);
+        exerciseBackend.setTitre(exercise.getTitre());
+        exerciseBackend.setType(exercise.getType());
+        exerciseBackend.setDonnee(exercise.getDonnee());
+        exerciseBackend.setSolution(exercise.getSolution());
 
         new EndpointsAsyncTaskExercise(exerciseBackend).execute();
 

@@ -5,37 +5,35 @@ import android.util.Log;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
-import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
-import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import servlets.backend.userApi.UserApi;
-import servlets.backend.userApi.model.User;
+import servlets.backend.exerciseApi.ExerciseApi;
+import servlets.backend.exerciseApi.model.Exercise;
 
 /**
  * Author: Théodore Pillet and Jonathan Joaquim.
  */
 
-public class EndpointsAsyncTaskUser extends AsyncTask<Void, Void, List<User>> {
-    private static UserApi userApi = null;
-    private static final String TAG = EndpointsAsyncTaskUser.class.getName();
-    private User user;
+public class EndpointsAsyncTaskExerciseDelete extends AsyncTask<Void, Void, List<Exercise>> {
+    private static ExerciseApi exerciseApi = null;
+    private static final String TAG = EndpointsAsyncTaskExercise.class.getName();
+    private Exercise exercise;
 
-    EndpointsAsyncTaskUser(){}
+    EndpointsAsyncTaskExerciseDelete(){}
 
-    public EndpointsAsyncTaskUser(User user){
-        this.user = user;
+    public EndpointsAsyncTaskExerciseDelete(Exercise exercise){
+        this.exercise = exercise;
     }
 
     @Override
-    protected List<User> doInBackground(Void... params) {
+    protected List<Exercise> doInBackground(Void... params) {
 
-        if(userApi == null){
+        if(exerciseApi == null){
             // Only do this once
-            UserApi.Builder builder = new UserApi.Builder(AndroidHttp.newCompatibleTransport(),
+            ExerciseApi.Builder builder = new ExerciseApi.Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null)
                     // options for running against local devappserver
                     // - 10.0.2.2 is localhost's IP address in Android emulator
@@ -44,35 +42,33 @@ public class EndpointsAsyncTaskUser extends AsyncTask<Void, Void, List<User>> {
                     // such as https://<your-app-id>.appspot.com
                     .setRootUrl("https://hes-project-learnlanguage.appspot.com/_ah/api/");
 
-
-            userApi = builder.build();
+            exerciseApi = builder.build();
         }
 
         try{
             // Call here the wished methods on the Endpoints
             // For instance insert
-            if(user != null){
-                userApi.insert(user).execute();
-                Log.i(TAG, "insert user");
+            if(exercise != null){
+                exerciseApi.remove(exercise.getId()).execute();
+                Log.i(TAG, "delete exercise");
             }
             // and for instance return the list of all employees
-            return userApi.list().execute().getItems();
+            return exerciseApi.list().execute().getItems();
 
         } catch (IOException e){
             Log.e(TAG, e.toString());
-            return new ArrayList<User>();
+            return new ArrayList<Exercise>();
         }
     }
 
     //This method gets executed on the UI thread - The UI can be manipulated directly inside
     //of this method
     @Override
-    protected void onPostExecute(List<User> result){
+    protected void onPostExecute(List<Exercise> result){
 
         if(result != null) {
-            for (User user : result) {
-                Log.i(TAG, "First name: " + user.getFirstname() + " Last name: "
-                        + user.getName());
+            for (Exercise exercise : result) {
+                Log.i(TAG, "Title : " + exercise.getTitre() + " / rule : " +exercise.getDonnee());
 
             }
         }

@@ -17,7 +17,6 @@ public class Choice {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String description;
-    private int idExercice;
     private String choice1;
     private String choice2;
     private String choice3;
@@ -56,14 +55,6 @@ public class Choice {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getIdExercice() {
-        return idExercice;
-    }
-
-    public void setIdExercice(int idExercice) {
-        this.idExercice = idExercice;
     }
 
     public String getChoice1() {

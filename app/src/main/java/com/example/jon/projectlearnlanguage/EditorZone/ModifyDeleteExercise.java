@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.jon.projectlearnlanguage.EndpointsAsyncTaskExerciseDelete;
+import com.example.jon.projectlearnlanguage.EndpointsAsyncTaskExerciseUpdate;
 import com.example.jon.projectlearnlanguage.R;
 
 import db.object.adapter.ExerciceDataSource;
@@ -92,6 +94,15 @@ public class ModifyDeleteExercise extends AppCompatActivity {
                 Exercise updatedExercise = new Exercise(id,titre,type,content,solution);
                 eds.updateExercise(updatedExercise);
 
+                servlets.backend.exerciseApi.model.Exercise exerciseBackend = new servlets.backend.exerciseApi.model.Exercise();
+                exerciseBackend.setId(Long.valueOf(updatedExercise.getId()));
+                exerciseBackend.setTitre(updatedExercise.getTitre());
+                exerciseBackend.setType(updatedExercise.getType());
+                exerciseBackend.setDonnee(updatedExercise.getDonnee());
+                exerciseBackend.setSolution(updatedExercise.getSolution());
+
+                new EndpointsAsyncTaskExerciseUpdate(exerciseBackend).execute();
+
                 Intent intent = new Intent(ModifyDeleteExercise.this,ExerciseView.class);
                 startActivity(intent);
 
@@ -131,6 +142,13 @@ public class ModifyDeleteExercise extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 int id = exercise.getId();
                 eds.deleteExercise(id);
+
+                servlets.backend.exerciseApi.model.Exercise exerciseBackend = new servlets.backend.exerciseApi.model.Exercise();
+
+                exerciseBackend.setId(Long.valueOf(exercise.getId()));
+
+                new EndpointsAsyncTaskExerciseDelete(exerciseBackend).execute();
+
                 Intent intent = new Intent(ModifyDeleteExercise.this, ExerciseView.class);
                 startActivity(intent);
 

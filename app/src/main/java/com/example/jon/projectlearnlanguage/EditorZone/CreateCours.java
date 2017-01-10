@@ -38,18 +38,20 @@ public class CreateCours extends AppCompatActivity {
         editTextCours = (EditText)findViewById(R.id.et_cours);
         editTextLevel = (EditText)findViewById(R.id.et_level);
 
-        String cours = editTextCours.getText().toString();
+        String lecon = editTextCours.getText().toString();
         int level = Integer.parseInt(editTextLevel.getText().toString());
 
         CoursDataSource cds = new CoursDataSource(getApplicationContext());
 
-        cds.createCours(new Cours(cours,level));
+        Long id = cds.createCours(new Cours(lecon,level));
 
+        Cours cours = cds.getCoursById(id);
 
         servlets.backend.coursApi.model.Cours coursBackend = new servlets.backend.coursApi.model.Cours();
 
-        coursBackend.setTitre(cours);
-        coursBackend.setLevel(level);
+        coursBackend.setId(id);
+        coursBackend.setTitre(cours.getTitre());
+        coursBackend.setLevel(cours.getLevel());
 
         new EndpointsAsyncTaskCours(coursBackend).execute();
 

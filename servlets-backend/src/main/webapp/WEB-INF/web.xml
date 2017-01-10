@@ -15,7 +15,7 @@
             <param-name>services</param-name>
             <param-value>servlets.backend.MyEndpoint, servlets.backend.ChoiceEndpoint,
                 servlets.backend.CoursEndpoint, servlets.backend.ExerciseEndpoint,
-                servlets.backend.UserEndpoint</param-value>
+                servlets.backend.UserEndpoint, servlets.backend.ChoiceEndpointEndpoint</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>

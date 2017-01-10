@@ -15,6 +15,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jon.projectlearnlanguage.EndpointsAsyncTaskUser;
+import com.example.jon.projectlearnlanguage.EndpointsAsyncTaskUserDelete;
+import com.example.jon.projectlearnlanguage.EndpointsAsyncTaskUserUpdate;
 import com.example.jon.projectlearnlanguage.R;
 
 import db.object.ReaderContract;
@@ -96,6 +99,15 @@ public class ModifyDeleteUser extends AppCompatActivity {
                 User updatedUser = new User(id,name,firstname,email,mdp);
                 uds.updateUser(updatedUser);
 
+                servlets.backend.userApi.model.User userBackend = new servlets.backend.userApi.model.User();
+                userBackend.setId(Long.valueOf(updatedUser.getId()));
+                userBackend.setName(updatedUser.getName());
+                userBackend.setFirstname(updatedUser.getFirstname());
+                userBackend.setEmail(updatedUser.getEmail());
+                userBackend.setMdp(updatedUser.getMdp());
+
+                new EndpointsAsyncTaskUserUpdate(userBackend).execute();
+
                 Intent intent = new Intent(ModifyDeleteUser.this,UserView.class);
                 startActivity(intent);
 
@@ -134,6 +146,13 @@ public class ModifyDeleteUser extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 int id = user.getId();
                 uds.deleteUser(id);
+
+                servlets.backend.userApi.model.User userBackend = new servlets.backend.userApi.model.User();
+
+                userBackend.setId(Long.valueOf(user.getId()));
+
+                new EndpointsAsyncTaskUserDelete(userBackend).execute();
+
                 Intent intent = new Intent(ModifyDeleteUser.this, UserView.class);
                 startActivity(intent);
 

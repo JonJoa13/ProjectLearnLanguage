@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.jon.projectlearnlanguage.EndpointsAsyncTaskCoursDelete;
+import com.example.jon.projectlearnlanguage.EndpointsAsyncTaskCoursUpdate;
 import com.example.jon.projectlearnlanguage.R;
 
 import db.object.adapter.CoursDataSource;
@@ -88,6 +90,15 @@ public class ModifyDeleteCours extends AppCompatActivity {
 
                 Cours updatedCours = new Cours(id, cours, level);
                 cds.updateCours(updatedCours);
+
+                servlets.backend.coursApi.model.Cours coursBackend = new servlets.backend.coursApi.model.Cours();
+
+                coursBackend.setId(Long.valueOf(updatedCours.getId()));
+                coursBackend.setTitre(updatedCours.getTitre());
+                coursBackend.setLevel(updatedCours.getLevel());
+
+                new EndpointsAsyncTaskCoursUpdate(coursBackend).execute();
+
                 Intent intent = new Intent(ModifyDeleteCours.this,CoursView.class);
                 startActivity(intent);
 
@@ -126,6 +137,13 @@ public class ModifyDeleteCours extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 int id = cours.getId();
                 cds.deleteCours(id);
+
+                servlets.backend.coursApi.model.Cours coursBackend = new servlets.backend.coursApi.model.Cours();
+
+                coursBackend.setId(Long.valueOf(cours.getId()));
+
+                new EndpointsAsyncTaskCoursDelete(coursBackend).execute();
+
                 Intent intent = new Intent(ModifyDeleteCours.this, CoursView.class);
                 startActivity(intent);
 

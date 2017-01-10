@@ -18,7 +18,6 @@ public class Exercise {
     private Long id;
     private String titre;
     private String type;
-    private int idCours;
     private String donnee;
     private String solution;
 
@@ -37,10 +36,6 @@ public class Exercise {
         this.type = type;
         this.donnee = donnee;
         this.solution = solution;
-    }
-
-    public Exercise(int idCours){
-        this.idCours = idCours;
     }
 
 
@@ -66,14 +61,6 @@ public class Exercise {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public int getIdCours() {
-        return idCours;
-    }
-
-    public void setIdCours(int idCours) {
-        this.idCours = idCours;
     }
 
     public String getDonnee() {

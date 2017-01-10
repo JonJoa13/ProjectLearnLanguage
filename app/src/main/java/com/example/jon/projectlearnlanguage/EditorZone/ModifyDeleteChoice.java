@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.jon.projectlearnlanguage.EndpointsAsyncTaskChoiceDelete;
+import com.example.jon.projectlearnlanguage.EndpointsAsyncTaskChoiceUpdate;
 import com.example.jon.projectlearnlanguage.R;
 
 import db.object.adapter.ChoiceDataSource;
@@ -87,8 +89,21 @@ public class ModifyDeleteChoice extends AppCompatActivity {
                 String choice1 = editTextChoice1.getText().toString();
                 String choice2 = editTextChoice2.getText().toString();
                 String choice3 = editTextChoice3.getText().toString();
+
                 Choice updatedChoice = new Choice(id,description,choice1,choice2,choice3);
                 cds.updateChoice(updatedChoice);
+
+                servlets.backend.choiceApi.model.Choice choiceBackend = new servlets.backend.choiceApi.model.Choice();
+
+                choiceBackend.setId(Long.valueOf(updatedChoice.getId()));
+                choiceBackend.setDescription(updatedChoice.getDescription());
+                choiceBackend.setChoice1(updatedChoice.getChoice1());
+                choiceBackend.setChoice2(updatedChoice.getChoice2());
+                choiceBackend.setChoice3(updatedChoice.getChoice3());
+
+                new EndpointsAsyncTaskChoiceUpdate(choiceBackend).execute();
+
+
                 Intent intent = new Intent(ModifyDeleteChoice.this, ChoiceView.class);
                 startActivity(intent);
 
@@ -127,6 +142,13 @@ public class ModifyDeleteChoice extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 int id = choice.getId();
                 cds.deleteChoice(id);
+
+                servlets.backend.choiceApi.model.Choice choiceBackend = new servlets.backend.choiceApi.model.Choice();
+
+                choiceBackend.setId(Long.valueOf(choice.getId()));
+
+                new EndpointsAsyncTaskChoiceDelete(choiceBackend).execute();
+
                 Intent intent = new Intent(ModifyDeleteChoice.this, ChoiceView.class);
                 startActivity(intent);
 
